@@ -1,0 +1,2547 @@
+/* Final stylesheet override block retained at the historical load position. */
+/* =========================================================
+   LIGHT WORKS PREVIEW — Video + echoline cleanup
+   Reduce dark mass in overview cards only. Dark mode and
+   project detail previews remain untouched.
+   ========================================================= */
+html[data-theme="light"] .works-card .visual.video{
+  background:
+    radial-gradient(circle at 72% 28%,rgba(86,105,112,.085),transparent 20%),
+    radial-gradient(circle at 24% 72%,rgba(133,149,155,.055),transparent 24%),
+    linear-gradient(145deg,#fbfcfc 0%,#f1f4f5 58%,#e9eef0 100%);
+}
+html[data-theme="light"] .works-card .video-frame{
+  border-color:rgba(35,48,53,.13);
+  background:
+    radial-gradient(circle at 50% 45%,rgba(255,255,255,.98),rgba(246,249,250,.94) 55%,rgba(232,238,240,.92) 100%);
+  box-shadow:
+    0 14px 34px rgba(31,42,47,.065),
+    inset 0 1px 0 rgba(255,255,255,1),
+    inset 0 0 0 1px rgba(255,255,255,.45);
+}
+html[data-theme="light"] .works-card .video-frame::before{
+  background:
+    conic-gradient(from 120deg,transparent 0 32%,rgba(103,121,128,.105) 40%,transparent 50% 100%);
+}
+html[data-theme="light"] .works-card .video-frame::after{
+  border-color:rgba(47,60,65,.24);
+  box-shadow:
+    inset 0 0 0 16px rgba(255,255,255,.58),
+    0 0 0 1px rgba(255,255,255,.72),
+    0 8px 22px rgba(36,48,53,.055);
+}
+
+html[data-theme="light"] .works-card .visual.echo{
+  background:
+    radial-gradient(circle at 35% 48%,rgba(94,117,126,.075),transparent 19%),
+    radial-gradient(circle at 68% 35%,rgba(136,158,167,.065),transparent 18%),
+    radial-gradient(circle at 50% 50%,rgba(255,255,255,.98),rgba(247,250,251,.94) 48%,rgba(235,241,243,.90) 100%);
+}
+html[data-theme="light"] .works-card .visual.echo::before{
+  content:"";
+  position:absolute;
+  left:50%;top:48%;
+  width:7px;height:7px;
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  background:#788a91;
+  box-shadow:0 0 0 5px rgba(120,138,145,.055),0 0 20px rgba(120,138,145,.12);
+}
+html[data-theme="light"] .works-card .echo-ring{
+  border-color:rgba(70,88,95,.13);
+  box-shadow:0 0 24px rgba(108,130,138,.025);
+}
+
+/* LIGHT WORKS — remove dark-looking shadows from overview previews only */
+html[data-theme="light"] .works-card{
+  box-shadow:
+    0 12px 34px rgba(112,124,129,.055),
+    inset 0 1px 0 rgba(255,255,255,1);
+}
+html[data-theme="light"] .works-card.featured{
+  box-shadow:
+    0 14px 40px rgba(112,124,129,.060),
+    inset 0 1px 0 rgba(255,255,255,1);
+}
+html[data-theme="light"] .works-card.is-clickable.is-hovered{
+  box-shadow:
+    0 16px 44px rgba(112,124,129,.070),
+    0 0 24px rgba(140,151,156,.028),
+    inset 0 1px 0 rgba(255,255,255,1);
+}
+html[data-theme="light"] .works-card .video-frame{
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,1),
+    inset 0 0 0 1px rgba(132,145,150,.045);
+}
+html[data-theme="light"] .works-card .video-frame::after{
+  box-shadow:
+    inset 0 0 0 16px rgba(255,255,255,.58),
+    0 0 0 1px rgba(130,143,148,.08);
+}
+html[data-theme="light"] .works-card .g-node{
+  box-shadow:0 0 10px rgba(120,132,137,.075);
+}
+html[data-theme="light"] .works-card .ticker,
+html[data-theme="light"] .works-card .task{
+  box-shadow:none;
+}
+html[data-theme="light"] .works-card .visual.echo::before{
+  box-shadow:0 0 0 5px rgba(120,138,145,.035),0 0 14px rgba(120,138,145,.06);
+}
+html[data-theme="light"] .works-card .echo-ring{
+  box-shadow:none;
+}
+
+
+/* =========================================================
+   LIGHT VIDEO HARNESS — remove gray haze
+   Color-only cleanup: no size/layout/animation changes.
+   ========================================================= */
+html[data-theme="light"] .work-detail-preview:has(.detail-harness-stage)::after{
+  box-shadow:none;
+}
+
+html[data-theme="light"] .detail-harness-stage{
+  --vh-bg:#ffffff;
+  --vh-surface:#ffffff;
+  --vh-soft:#ffffff;
+  --vh-line:rgba(24,33,37,.105);
+  --vh-line-strong:rgba(24,33,37,.19);
+  background:#ffffff;
+}
+
+html[data-theme="light"] .detail-harness-stage::before{
+  background-image:
+    linear-gradient(rgba(24,33,37,.016) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(24,33,37,.016) 1px,transparent 1px);
+}
+
+html[data-theme="light"] .detail-harness-panel,
+html[data-theme="light"] .detail-harness-track,
+html[data-theme="light"] .detail-harness-metric,
+html[data-theme="light"] .detail-harness-state,
+html[data-theme="light"] .detail-harness-gate,
+html[data-theme="light"] .detail-harness-change,
+html[data-theme="light"] .detail-harness-output-meta div,
+html[data-theme="light"] .detail-harness-output-info span{
+  background:#ffffff;
+  box-shadow:none;
+}
+
+html[data-theme="light"] .detail-harness-track-step{
+  background:rgba(255,255,255,.96);
+}
+
+html[data-theme="light"] .detail-harness-gate-actions span:not(:first-child){
+  background:#ffffff;
+}
+
+/* LIGHT VIDEO HARNESS — soften borders on pure white */
+html[data-theme="light"] .work-detail-card:has(.detail-harness-stage){
+  border-color:#e1e6e8;
+}
+html[data-theme="light"] .work-detail-preview:has(.detail-harness-stage){
+  border-color:#e3e8ea;
+}
+html[data-theme="light"] .detail-harness-stage{
+  --vh-line:#e0e6e8;
+  --vh-line-strong:#cfd8db;
+}
+html[data-theme="light"] .detail-harness-screen{
+  border-color:#d6e0e2;
+}
+html[data-theme="light"] .detail-harness-chip{
+  border-color:rgba(44,157,151,.22);
+}
+html[data-theme="light"] .detail-harness-gate-actions span:first-child{
+  border-color:rgba(94,168,120,.24);
+}
+
+
+/* =========================================================
+   LIGHT DETAIL CLEANUP — Memora / AI Radar / Life OS
+   Follow the Video Harness treatment: pure white surfaces,
+   softer borders, no gray haze or dark shadows.
+   Color-only cleanup: no size/layout/animation changes.
+   ========================================================= */
+
+/* MEMORA */
+html[data-theme="light"] .work-detail-card:has(.detail-memora-stage){
+  border-color:#e3e6ea;
+}
+html[data-theme="light"] .work-detail-preview:has(.detail-memora-stage){
+  border-color:#e7e9ed;
+}
+html[data-theme="light"] .work-detail-preview:has(.detail-memora-stage)::after{
+  box-shadow:none;
+}
+html[data-theme="light"] .detail-memora-stage{
+  background:#ffffff;
+}
+html[data-theme="light"] .detail-memora-stage::before{
+  background-image:
+    linear-gradient(rgba(48,57,73,.014) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(48,57,73,.014) 1px,transparent 1px);
+  opacity:.42;
+}
+html[data-theme="light"] .detail-memora-card,
+html[data-theme="light"] .detail-memora-stat,
+html[data-theme="light"] .detail-memora-panel,
+html[data-theme="light"] .detail-memora-domain,
+html[data-theme="light"] .detail-memora-flowstep{
+  border-color:#e2e5eb;
+  background:#ffffff;
+  box-shadow:none;
+}
+html[data-theme="light"] .detail-memora-focus{
+  background:#ffffff;
+  border-color:#e5e3f3;
+  box-shadow:none;
+}
+html[data-theme="light"] .detail-memora-search{
+  background:#ffffff;
+  border-color:#e3e6eb;
+}
+html[data-theme="light"] .detail-memora-item,
+html[data-theme="light"] .detail-memora-insight,
+html[data-theme="light"] .detail-memora-readingitem,
+html[data-theme="light"] .detail-memora-note{
+  border-color:#edf0f2;
+}
+
+/* AI RADAR */
+html[data-theme="light"] .work-detail-card:has(.detail-radar-stage){
+  border-color:#e3e7e6;
+}
+html[data-theme="light"] .work-detail-preview:has(.detail-radar-stage){
+  border-color:#e7ebea;
+}
+html[data-theme="light"] .work-detail-preview:has(.detail-radar-stage)::after{
+  box-shadow:none;
+}
+html[data-theme="light"] .detail-radar-stage{
+  --radar-bg:#ffffff;
+  --radar-surface:#ffffff;
+  --radar-surface-soft:#ffffff;
+  --radar-line:#e2e7e5;
+  --radar-line-strong:#d2dcda;
+  background:#ffffff;
+}
+html[data-theme="light"] .detail-radar-stage::before{
+  background-image:
+    linear-gradient(rgba(39,54,49,.014) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(39,54,49,.014) 1px,transparent 1px);
+}
+html[data-theme="light"] .detail-radar-card,
+html[data-theme="light"] .detail-radar-source{
+  background:#ffffff;
+  box-shadow:none;
+}
+
+/* LIFE OS */
+html[data-theme="light"] .work-detail-card:has(.detail-lifeos-stage){
+  border-color:#e3e6e8;
+}
+html[data-theme="light"] .work-detail-preview:has(.detail-lifeos-stage){
+  border-color:#e7eaec;
+}
+html[data-theme="light"] .work-detail-preview:has(.detail-lifeos-stage)::after{
+  box-shadow:none;
+}
+html[data-theme="light"] .detail-lifeos-stage{
+  --los-bg:#ffffff;
+  --los-grid:rgba(31,38,43,.014);
+  --los-surface:#ffffff;
+  --los-surface-2:#ffffff;
+  --los-line:#e2e6e8;
+  --los-line-strong:#d1d9dc;
+  background:#ffffff;
+}
+html[data-theme="light"] .detail-lifeos-card,
+html[data-theme="light"] .detail-lifeos-step:not(.decision),
+html[data-theme="light"] .detail-lifeos-gate{
+  background:#ffffff;
+  box-shadow:none;
+}
+html[data-theme="light"] .detail-lifeos-journey{
+  background:#ffffff;
+}
+
+
+
+/* =========================================================
+   LIGHT ECHOLINE — match Video detail frame
+   Remove the dark stage frame; color-only change.
+   ========================================================= */
+html[data-theme="light"] .work-detail-card[data-project="echo"]{
+  border-color:#e1e6e8;
+}
+html[data-theme="light"] .work-detail-preview:has(.detail-echo-stage){
+  border-color:#e3e8ea;
+}
+html[data-theme="light"] .work-detail-preview:has(.detail-echo-stage)::after{
+  box-shadow:none;
+}
+html[data-theme="light"] .detail-echo-stage{
+  background:#ffffff;
+}
+html[data-theme="light"] .detail-echo-app{
+  border-color:#e0e6e8;
+}
+
+/* =========================================================
+   LIGHT UNFRAMED — airy reference treatment
+   Reference direction: pale music canvas, graphite lyrics,
+   soft orbit and pastel spectrum. Light mode only.
+   ========================================================= */
+html[data-theme="light"] .work-detail-card:has(.detail-music-stage){
+  border-color:#e1e6e5;
+  background:#ffffff;
+  box-shadow:0 18px 52px rgba(112,124,129,.045),inset 0 1px 0 #fff;
+}
+html[data-theme="light"] .work-detail-preview:has(.detail-music-stage){
+  border-color:#dfe5e3;
+  background:#f5f7f6;
+}
+html[data-theme="light"] .work-detail-preview:has(.detail-music-stage)::after{
+  box-shadow:none;
+}
+html[data-theme="light"] .detail-music-stage{
+  background:
+    radial-gradient(circle at 50% 40%,rgba(255,255,255,.92),rgba(255,255,255,.52) 34%,transparent 64%),
+    linear-gradient(180deg,#f7f8f8 0%,#f2f5f4 100%);
+}
+html[data-theme="light"] .detail-music-orbit{
+  border-color:#d4dad8;
+}
+html[data-theme="light"] .detail-music-orbit::before{
+  background:#8f9996;
+  box-shadow:0 0 0 6px rgba(143,153,150,.10),0 0 14px rgba(143,153,150,.14);
+}
+html[data-theme="light"] .detail-music-track-label small{
+  color:#98a29f;
+}
+html[data-theme="light"] .detail-music-track-label strong{
+  color:#4e5855;
+}
+html[data-theme="light"] .detail-music-lyrics::before{
+  color:#a7b0ad;
+}
+html[data-theme="light"] .detail-music-lyric{
+  color:#a4adab;
+  opacity:.72;
+}
+html[data-theme="light"] .detail-music-lyric:hover{
+  color:#6d7774;
+  opacity:.92;
+}
+html[data-theme="light"] .detail-music-lyric.is-current{
+  color:#2f3836;
+  text-shadow:none;
+}
+html[data-theme="light"] .detail-music-wave::before{
+  background:linear-gradient(90deg,transparent,#dfe4e2 10%,#d6ddda 50%,#dfe4e2 90%,transparent);
+}
+html[data-theme="light"] .detail-music-wave::after{
+  opacity:.30;
+  filter:blur(24px);
+}
+html[data-theme="light"] .detail-music-wave i{
+  opacity:.36;
+  filter:saturate(.76) brightness(1.06);
+}
+html[data-theme="light"] .detail-music-wave:hover i{
+  opacity:.52;
+}
+html[data-theme="light"] .detail-music-wave i.is-played{
+  opacity:.88;
+  filter:saturate(.90) brightness(1.03);
+  box-shadow:0 0 10px color-mix(in srgb,var(--bar-top) 18%,transparent);
+}
+html[data-theme="light"] .detail-music-play{
+  border-color:#cfd6d4;
+  background:rgba(255,255,255,.72);
+  color:#4b5552;
+  box-shadow:none;
+}
+html[data-theme="light"] .detail-music-play:hover{
+  border-color:#bfc8c5;
+  background:#ffffff;
+  color:#28312f;
+}
+html[data-theme="light"] .detail-music-progress::before{
+  background:#d7dddb;
+}
+html[data-theme="light"] .detail-music-progress i{
+  background:#7e8a86;
+  box-shadow:none;
+}
+html[data-theme="light"] .detail-music-time{
+  color:#8d9794;
+}
+
+
+/* =========================================================
+   WORKS OVERVIEW — FINAL BALANCE PASS
+   Keep geometry intact; refine shared hover and preview weight.
+   ========================================================= */
+.works-card .meta h3{
+  line-height:1.08;
+}
+.works-card .meta .sub{
+  line-height:1.35;
+}
+
+/* Hover stays present, but quieter than the earlier V14 pass. */
+.works-card.is-clickable.is-hovered .visual{
+  transform:scale(1.020);
+  filter:brightness(1.035) contrast(1.012);
+}
+.works-card.is-clickable.is-hovered .meta{
+  transform:translateY(-1px);
+}
+html[data-theme="light"] .works-card.is-clickable.is-hovered .visual{
+  filter:saturate(1.015) contrast(1.01);
+}
+
+/* AI Radar: keep the signal-feed identity while lowering visual density. */
+.works-card .ticker{
+  box-shadow:none;
+}
+.works-card .ticker-head{
+  opacity:.72;
+}
+.works-card .ticker-track{
+  opacity:.82;
+}
+.works-card .news-row{
+  border-top-color:rgba(255,255,255,.055);
+}
+.works-card .news-row:nth-child(n+4){
+  opacity:.72;
+}
+html[data-theme="light"] .works-card .ticker{
+  border-color:rgba(23,29,32,.085);
+  background:rgba(255,255,255,.26);
+}
+html[data-theme="light"] .works-card .ticker-head{
+  color:#8b9498;
+}
+html[data-theme="light"] .works-card .ticker-track{
+  opacity:.76;
+}
+html[data-theme="light"] .works-card .news-row{
+  border-top-color:rgba(23,29,32,.055);
+}
+html[data-theme="light"] .works-card .news-row b{
+  color:#586166;
+}
+html[data-theme="light"] .works-card .news-row span{
+  color:#929a9e;
+}
+
+/* Echoline: strengthen the ripple origin without adding more UI. */
+html[data-theme="dark"] .works-card .visual.echo::before{
+  content:"";
+  position:absolute;
+  left:50%;top:48%;
+  width:7px;height:7px;
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  background:#d8d1bb;
+  box-shadow:0 0 16px rgba(238,228,200,.24);
+}
+html[data-theme="dark"] .works-card .echo-ring{
+  border-color:rgba(238,233,216,.145);
+}
+html[data-theme="light"] .works-card .visual.echo::before{
+  width:8px;height:8px;
+  background:#6f8188;
+  box-shadow:0 0 0 5px rgba(120,138,145,.045),0 0 16px rgba(120,138,145,.075);
+}
+html[data-theme="light"] .works-card .echo-ring{
+  border-color:rgba(70,88,95,.17);
+}
+
+
+/* =========================================================
+   WORK DETAIL OUTER RHYTHM — desktop common shell
+   Keep all six project previews intact; normalize only the
+   shared detail frame, copy column and information rhythm.
+   ========================================================= */
+@media(min-width:861px){
+  .work-detail-topbar{
+    left:30px;
+    right:30px;
+    top:23px;
+  }
+
+  .work-detail-index,
+  .work-detail-close{
+    line-height:1;
+  }
+
+  .work-detail-close{
+    padding:7px 0 7px 16px;
+  }
+
+  .work-detail-body{
+    inset:68px 30px 30px;
+    grid-template-columns:minmax(0,1.38fr) minmax(320px,.72fr);
+    gap:clamp(34px,3.5vw,54px);
+  }
+
+  .work-detail-copy{
+    width:100%;
+    max-width:382px;
+    justify-self:start;
+  }
+
+  .work-detail-kicker{
+    line-height:1.35;
+  }
+
+  .work-detail-copy h2{
+    margin-top:11px;
+    font-size:clamp(35px,3.35vw,50px);
+    line-height:1.02;
+    letter-spacing:-.032em;
+  }
+
+  .work-detail-tagline{
+    margin-top:16px;
+    font-size:14px;
+    line-height:1.68;
+  }
+
+  .work-detail-description{
+    margin-top:11px;
+    max-width:374px;
+    line-height:1.76;
+  }
+
+  .work-detail-facts{
+    margin-top:22px;
+    gap:9px;
+  }
+
+  .work-detail-fact{
+    grid-template-columns:62px minmax(0,1fr);
+    gap:13px;
+    padding-top:9px;
+  }
+
+  .work-detail-fact dt{
+    line-height:1.45;
+  }
+
+  .work-detail-fact dd{
+    line-height:1.55;
+  }
+
+  .work-detail-tags{
+    margin-top:18px;
+    gap:6px;
+  }
+
+  .work-detail-tags span{
+    padding:5px 8px;
+    line-height:1.25;
+  }
+
+  .work-detail-actions{
+    margin-top:22px;
+    gap:20px;
+  }
+
+  .work-detail-action{
+    line-height:1.35;
+    padding-bottom:4px;
+  }
+
+  .detail-hint{
+    bottom:21px;
+  }
+}
+/* END WORK DETAIL OUTER RHYTHM */
+
+/* =========================================================
+   MOBILE METHOD COMPOSITION — dedicated phone constellation
+   Preserve the Method logic; only phone geometry is adapted.
+   ========================================================= */
+@media(max-width:759px){
+  .method-layout{
+    top:60%;
+    width:100%;
+    height:min(500px,58vh);
+  }
+
+  .method-node{
+    width:clamp(104px,29vw,116px);
+    height:clamp(104px,29vw,116px);
+  }
+  .method-node::after{inset:12px}
+  .method-node.think{left:27%;top:62%}
+  .method-node.build{left:50%;top:29%}
+  .method-node.connect{left:73%;top:62%}
+  .method-node strong{font-size:18px}
+  .method-node .method-index{margin-bottom:5px;font-size:6px}
+  .method-node span{display:none}
+
+  .method-center{
+    left:50%;
+    top:49%;
+    width:6px;
+    height:6px;
+  }
+  .method-center::after{
+    width:34px;
+    height:34px;
+  }
+
+  .method-source{
+    gap:5px;
+    padding:6px 8px;
+    font-size:8px;
+    border-radius:999px;
+  }
+  .method-source::before{
+    width:4px;
+    height:4px;
+  }
+  .method-source small{font-size:6px;letter-spacing:.11em}
+  .method-source b{font-size:8px;letter-spacing:.01em}
+}
+/* END MOBILE METHOD COMPOSITION */
+
+
+/* =========================================================
+   MOBILE EXPLORING COMPOSITION — dedicated phone constellation
+   Preserve the six directions and their network; only phone
+   geometry / safe-area placement is adapted.
+   ========================================================= */
+@media(max-width:759px){
+  .explore-field{
+    inset:168px 18px 66px;
+  }
+
+  .explore-origin{
+    left:50%;
+    top:50%;
+  }
+
+  .explore-seed{
+    gap:8px;
+    max-width:150px;
+  }
+  .explore-seed .seed-dot{
+    margin-top:4px;
+  }
+  .explore-seed .seed-name{
+    font-size:10px;
+    line-height:1.2;
+  }
+  .explore-seed .seed-status{
+    margin-top:4px;
+    font-size:6.5px;
+    letter-spacing:.14em;
+  }
+
+  /* Alternating two-column field: spatial, but fully inside phone safe area. */
+  .explore-field > .explore-seed:nth-child(2){left:9% !important;top:9% !important;}
+  .explore-field > .explore-seed:nth-child(3){left:54% !important;top:24% !important;}
+  .explore-field > .explore-seed:nth-child(4){left:14% !important;top:43% !important;}
+  .explore-field > .explore-seed:nth-child(5){left:53% !important;top:58% !important;}
+  .explore-field > .explore-seed:nth-child(6){left:8% !important;top:75% !important;}
+  .explore-field > .explore-seed:nth-child(7){left:55% !important;top:89% !important;}
+}
+/* END MOBILE EXPLORING COMPOSITION */
+
+/* =========================================================
+   MOBILE PRIMARY HUD — one stable baseline while scrolling
+   Keeps phase / scroll hint / progress aligned through Seed + Grow.
+   ========================================================= */
+@media(max-width:860px){
+  .sticky:not(.is-ending-phase) .phase,
+  .sticky:not(.is-ending-phase) .scroll,
+  .sticky:not(.is-ending-phase) .progress{
+    bottom:calc(18px + env(safe-area-inset-bottom,0px));
+    min-height:16px;
+    line-height:16px;
+  }
+
+  .sticky:not(.is-ending-phase) .phase{
+    left:20px;
+    display:flex;
+    align-items:center;
+  }
+
+  .sticky:not(.is-ending-phase) .scroll{
+    display:flex;
+    align-items:center;
+  }
+
+  .sticky:not(.is-ending-phase) .progress{
+    right:20px;
+    gap:8px;
+    font-size:7px;
+    letter-spacing:.12em;
+    align-items:center;
+  }
+
+  .sticky:not(.is-ending-phase) .progress-line{
+    width:48px;
+  }
+}
+/* END MOBILE PRIMARY HUD */
+
+/* =========================================================
+   MOBILE ENDING HUD — dedicated phone safe-area rhythm
+   Keeps the ending artwork unchanged; only separates the
+   persistent HUD into two calm vertical tiers on phones.
+   ========================================================= */
+@media(max-width:860px){
+  .end-whisper{
+    display:block;
+    left:50%;
+    top:66%;
+    bottom:auto;
+    width:calc(100% - 72px);
+    transform:translateX(-50%);
+    text-align:center;
+    font-size:6.5px;
+    letter-spacing:.20em;
+    white-space:nowrap;
+  }
+
+  .sticky.is-ending-phase .phase,
+  .sticky.is-ending-phase .progress{
+    bottom:calc(18px + env(safe-area-inset-bottom,0px));
+  }
+
+  .sticky.is-ending-phase .phase{
+    left:20px;
+    max-width:46vw;
+    font-size:7px;
+    letter-spacing:.17em;
+    white-space:nowrap;
+  }
+
+  .sticky.is-ending-phase .progress{
+    right:20px;
+    gap:8px;
+    font-size:7px;
+    letter-spacing:.12em;
+  }
+
+  .sticky.is-ending-phase .progress-line{
+    width:52px;
+  }
+}
+/* END MOBILE ENDING HUD */
+
+
+/* =========================================================
+   MOBILE DETAIL 01 — Video Production Harness
+   Dedicated phone composition; desktop detail remains untouched.
+   ========================================================= */
+@media(max-width:759px){
+  .work-detail-card:has(.detail-harness-stage) .work-detail-body{
+    grid-template-rows:812px auto;
+    gap:18px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .work-detail-preview{
+    grid-row:1;
+    min-height:812px;
+    overflow:hidden;
+  }
+  .work-detail-card:has(.detail-harness-stage) .work-detail-copy{
+    grid-row:2;
+  }
+
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-stage{
+    padding:14px;
+    overflow:hidden;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-app{
+    height:auto;
+    min-height:100%;
+    grid-template-rows:auto auto auto auto;
+    gap:10px;
+  }
+
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-head{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-brand small{
+    font-size:7.5px;
+    letter-spacing:.14em;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-brand h3{
+    margin-top:4px;
+    font-size:22px;
+    line-height:1.02;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-brand p{
+    margin-top:5px;
+    max-width:none;
+    font-size:8.6px;
+    line-height:1.45;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-metrics{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:6px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-metric{
+    min-width:0;
+    padding:7px 8px;
+    text-align:left;
+    border-radius:9px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-metric b{
+    font-size:14px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-metric span{
+    margin-top:3px;
+    font-size:6.5px;
+    line-height:1.15;
+  }
+
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-track{
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:4px;
+    padding:6px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-track::before,
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-track::after{
+    display:none;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-track-step{
+    min-height:30px;
+    padding:5px 2px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-track-step b{
+    font-size:7.3px;
+    line-height:1.05;
+    white-space:normal;
+    text-overflow:clip;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-track-step span{
+    display:none;
+  }
+
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-main-v3{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:8px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-main-v3 > .detail-harness-run,
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-main-v3 > .detail-harness-control-v3,
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-main-v3 > .detail-harness-output{
+    grid-column:1;
+    grid-row:auto;
+    height:auto;
+  }
+
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-main-v3 > .detail-harness-run{
+    padding:9px;
+    gap:8px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-project h4{
+    margin-top:3px;
+    font-size:12px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-project p{
+    margin-top:3px;
+    font-size:7.2px;
+    line-height:1.35;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-eyebrow{
+    font-size:7px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-state-head{
+    min-height:20px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-state-head > span:first-child{
+    font-size:6.4px;
+    letter-spacing:.12em;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-chip{
+    padding:4px 6px;
+    font-size:6.4px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-run .detail-harness-state-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:5px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-run .detail-harness-state{
+    min-width:0;
+    min-height:45px;
+    padding:6px;
+    border-radius:8px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-run .detail-harness-state small{
+    font-size:6.1px;
+    line-height:1.05;
+    white-space:normal;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-run .detail-harness-state b{
+    margin-top:4px;
+    font-size:7.2px;
+  }
+
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-control-v3{
+    padding:8px;
+    gap:7px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-control-v3 .detail-harness-gates{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:6px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-control-v3 .detail-harness-gate,
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-control-v3 .detail-harness-change{
+    padding:7px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-stage-label{
+    font-size:6.4px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-gate b,
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-change b{
+    margin-top:2px;
+    font-size:7.7px;
+    line-height:1.18;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-gate p,
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-change p{
+    margin-top:3px;
+    font-size:6.4px;
+    line-height:1.35;
+    -webkit-line-clamp:2;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-gate-actions{
+    margin-top:5px;
+    gap:4px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-gate-actions span{
+    padding:3px 4px;
+    font-size:6.1px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-change strong{
+    margin-top:5px;
+    padding:4px 5px;
+    font-size:6.1px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-remote{
+    padding-top:6px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-remote b,
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-remote span{
+    font-size:6.5px;
+  }
+
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-main-v3 > .detail-harness-output{
+    padding:8px;
+    gap:6px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-output-head b{
+    font-size:8.6px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-output-head span{
+    font-size:6.2px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-main-v3 .detail-harness-screen{
+    margin-top:2px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-output-info{
+    margin-top:0;
+    padding-top:6px;
+    gap:5px;
+  }
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-output-info span{
+    min-height:18px;
+    padding:0 6px;
+    font-size:6px;
+  }
+
+  .work-detail-card:has(.detail-harness-stage) .detail-harness-foot{
+    display:none;
+  }
+}
+
+
+/* =========================================================
+   MOBILE DETAIL 02 — Unframed
+   Dedicated phone music composition. Preserve playback / lyric
+   sync / spectrum behavior; adapt only mobile geometry.
+   ========================================================= */
+@media(max-width:759px){
+  .work-detail-card:has(.detail-music-stage) .work-detail-body{
+    grid-template-rows:580px auto;
+    gap:18px;
+  }
+  .work-detail-card:has(.detail-music-stage) .work-detail-preview{
+    grid-row:1;
+    min-height:580px;
+    overflow:hidden;
+  }
+  .work-detail-card:has(.detail-music-stage) .work-detail-copy{
+    grid-row:2;
+  }
+
+  .work-detail-card:has(.detail-music-stage) .detail-music-stage{
+    overflow:hidden;
+  }
+
+  .work-detail-card:has(.detail-music-stage) .detail-music-track-label{
+    top:5.5%;
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-track-label small{
+    font-size:6.5px;
+    letter-spacing:.20em;
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-track-label strong{
+    margin-top:6px;
+    font-size:12px;
+  }
+
+  .work-detail-card:has(.detail-music-stage) .detail-music-orbit{
+    display:block;
+    top:42%;
+    width:min(52vw,210px);
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-orbit::before{
+    transform-origin:0 calc(min(52vw,210px) / 2 + 4px);
+  }
+
+  .work-detail-card:has(.detail-music-stage) .detail-music-lyrics{
+    left:7%;
+    right:7%;
+    top:42%;
+    height:158px;
+    transform:translateY(-50%);
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-lyrics::before{
+    top:-2px;
+    font-size:5.5px;
+    letter-spacing:.18em;
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-lyric{
+    max-width:100%;
+    margin:3px 0;
+    font-size:7.5px;
+    line-height:1.45;
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-lyric.is-current{
+    margin:6px 0;
+    font-size:12.5px;
+    line-height:1.38;
+  }
+
+  .work-detail-card:has(.detail-music-stage) .detail-music-bottom{
+    left:7%;
+    right:7%;
+    bottom:9%;
+    grid-template-rows:92px 34px;
+    row-gap:11px;
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-bottom .detail-music-wave{
+    height:92px;
+    gap:1.15px;
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-wave i{
+    width:1.55px;
+    min-width:1.55px;
+    border-radius:999px 999px 2px 2px;
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-wave::after{
+    left:2%;
+    right:2%;
+    bottom:-7px;
+    height:26px;
+    filter:blur(17px);
+  }
+
+  .work-detail-card:has(.detail-music-stage) .detail-music-bottom .detail-music-controls{
+    min-height:34px;
+    grid-template-columns:56px minmax(0,1fr) 62px;
+    gap:9px;
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-play{
+    height:32px;
+    font-size:7px;
+    letter-spacing:.12em;
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-progress{
+    height:16px;
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-bottom .detail-music-time{
+    grid-column:auto;
+    margin-top:0;
+    min-width:62px;
+    width:62px;
+    font-size:6.6px;
+    letter-spacing:.05em;
+    white-space:nowrap;
+  }
+}
+/* END MOBILE DETAIL 02 — Unframed */
+
+
+/* =========================================================
+   MOBILE DETAIL 03 — Memora
+   Dedicated phone Knowledge OS composition. Keep the same
+   information architecture; compress density, not meaning.
+   ========================================================= */
+@media(max-width:759px){
+  .work-detail-card:has(.detail-memora-stage) .work-detail-body{
+    grid-template-rows:1180px auto;
+    gap:18px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .work-detail-preview{
+    grid-row:1;
+    min-height:1180px;
+    overflow:hidden;
+  }
+  .work-detail-card:has(.detail-memora-stage) .work-detail-copy{
+    grid-row:2;
+  }
+
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-stage{
+    padding:12px;
+    overflow:hidden;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-app{
+    height:auto;
+    min-height:100%;
+    grid-template-rows:auto auto auto auto auto;
+    gap:8px;
+  }
+
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-hero{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:8px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-head{
+    padding:12px 13px 11px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-head small,
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-kicker,
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-section small,
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-domain small{
+    font-size:5.8px;
+    letter-spacing:.14em;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-head h3{
+    margin-top:7px;
+    font-size:28px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-head p{
+    margin-top:4px;
+    font-size:8.2px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-search{
+    margin-top:10px;
+    height:26px;
+    padding:0 8px 0 9px;
+    font-size:6.4px;
+    border-radius:9px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-search span{
+    min-width:0;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-search b{
+    min-width:24px;
+    height:16px;
+    font-size:6px;
+  }
+
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-focus{
+    padding:11px 12px 10px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-focus h4{
+    margin-top:5px;
+    font-size:11px;
+    line-height:1.32;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-focus p{
+    margin-top:5px;
+    font-size:6.7px;
+    line-height:1.48;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3;
+    overflow:hidden;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-pill{
+    margin-top:7px;
+    min-width:64px;
+    height:20px;
+    padding:0 8px;
+    font-size:6.5px;
+    border-radius:7px;
+  }
+
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-stats{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:5px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-stat{
+    padding:8px 3px 7px;
+    border-radius:10px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-stat b{
+    font-size:15px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-stat span{
+    margin-top:4px;
+    font-size:7px;
+    line-height:1.2;
+  }
+
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-main{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:8px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-left,
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-right{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto;
+    gap:8px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-panel{
+    border-radius:11px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-panelhead{
+    gap:8px;
+    padding:9px 10px 6px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-panelhead h5{
+    margin-top:2px;
+    font-size:11px;
+    line-height:1.15;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-panelhint{
+    font-size:7px;
+  }
+
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-list{
+    padding:0 10px 7px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-item{
+    padding:6px 0;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-item:nth-child(3){
+    display:none;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-item b{
+    font-size:7.3px;
+    line-height:1.35;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-item span{
+    gap:6px;
+    margin-top:3px;
+    font-size:5.7px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-tag{
+    height:15px;
+    padding:0 5px;
+    font-size:5.4px;
+  }
+
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-insights,
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-reading{
+    padding:0 10px 7px;
+    gap:5px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-insight,
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-readingitem{
+    padding-top:6px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-readingitem:nth-child(3){
+    display:none;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-insight b,
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-readingitem b{
+    font-size:6.8px;
+    line-height:1.38;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-insight span,
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-readingitem span{
+    margin-top:3px;
+    font-size:5.5px;
+    line-height:1.35;
+  }
+
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-metrics{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:6px;
+    padding:0 10px 8px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-metrics b{
+    font-size:14px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-metrics span{
+    margin-top:3px;
+    font-size:5.2px;
+    line-height:1.2;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-note{
+    display:none;
+  }
+
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-domains{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:6px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-domain{
+    padding:9px 9px 8px;
+    border-radius:10px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-domain h6{
+    margin-top:5px;
+    font-size:7.6px;
+    line-height:1.3;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-domain p{
+    display:none;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-domain b{
+    margin-top:5px;
+    font-size:6px;
+  }
+
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-flow{
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:4px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-flowstep{
+    min-width:0;
+    padding:7px 3px 6px;
+    border-radius:9px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-flowstep::after{
+    display:none;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-flowstep b{
+    width:18px;
+    height:18px;
+    font-size:7px;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-flowstep h6{
+    margin-top:5px;
+    font-size:6px;
+    line-height:1.15;
+  }
+  .work-detail-card:has(.detail-memora-stage) .detail-memora-flowstep p{
+    display:none;
+  }
+}
+/* END MOBILE DETAIL 03 — Memora */
+
+
+
+/* =========================================================
+   MOBILE DETAIL 04 — AI Radar
+   Dedicated phone intelligence pipeline. Keep the source →
+   process → output story; compress density, not meaning.
+   ========================================================= */
+@media(max-width:759px){
+  .work-detail-card:has(.detail-radar-stage) .work-detail-body{
+    grid-template-rows:900px auto;
+    gap:18px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .work-detail-preview{
+    grid-row:1;
+    min-height:900px;
+    overflow:hidden;
+  }
+  .work-detail-card:has(.detail-radar-stage) .work-detail-copy{
+    grid-row:2;
+  }
+
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-stage{
+    padding:12px;
+    overflow:hidden;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-app{
+    height:auto;
+    min-height:100%;
+    grid-template-rows:auto auto auto;
+    gap:8px;
+  }
+
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-head{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:8px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-brand small,
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-section-label,
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-status small,
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-foot{
+    font-size:5.8px;
+    letter-spacing:.14em;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-brand h3{
+    margin-top:4px;
+    font-size:24px;
+    line-height:1;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-brand p{
+    margin-top:4px;
+    max-width:none;
+    font-size:7.2px;
+    line-height:1.4;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-status{
+    min-width:0;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+    padding:7px 8px;
+    border-radius:9px;
+    text-align:left;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-status b{
+    margin-top:0;
+    font-size:7.8px;
+    line-height:1.2;
+  }
+
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-body{
+    min-height:0;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:8px;
+    overflow:visible;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-card{
+    border-radius:10px;
+    box-shadow:none;
+  }
+
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-sources{
+    padding:9px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-source-list{
+    margin-top:6px;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:5px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-source{
+    min-width:0;
+    padding:6px 5px 6px 20px;
+    border-radius:7px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-source::before{
+    left:7px;
+    width:5px;
+    height:5px;
+    margin-top:-2.5px;
+    box-shadow:0 0 0 3px color-mix(in srgb,var(--radar-green) 9%,transparent);
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-source b{
+    font-size:7.2px;
+    line-height:1.15;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-source span{
+    margin-top:2px;
+    font-size:5.5px;
+    line-height:1.2;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-capture{
+    margin-top:7px;
+    padding-top:6px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-capture b{
+    font-size:7px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-capture span{
+    margin-top:3px;
+    font-size:5.7px;
+    line-height:1.35;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+    overflow:hidden;
+  }
+
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-pipe{
+    padding:9px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-pipe::before{
+    left:22px;
+    top:34px;
+    bottom:12px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-pipe::after{
+    left:19px;
+    top:35px;
+    width:6px;
+    height:6px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-steps{
+    margin-top:5px;
+    gap:2px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-step{
+    min-width:0;
+    padding:5px 5px 5px 24px;
+    border-radius:6px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-step em{
+    left:3px;
+    top:6px;
+    width:13px;
+    height:13px;
+    font-size:5.4px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-step b{
+    font-size:7.4px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-step > span{
+    margin-left:4px;
+    font-size:5.7px;
+    line-height:1.25;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-dedup{
+    margin-top:3px;
+    gap:3px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-dedup i{
+    padding:2px 3px;
+    font-size:5px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-translate{
+    margin-top:3px;
+    padding:3px 5px;
+    font-size:5.4px;
+    line-height:1.3;
+  }
+
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-output{
+    display:grid;
+    grid-template-rows:auto auto;
+    gap:6px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-result{
+    padding:9px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-result-head b{
+    font-size:7.6px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-result-head span{
+    font-size:5.5px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-story{
+    padding:6px 0;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-story:first-of-type{
+    margin-top:5px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-story small{
+    font-size:5.4px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-story b{
+    margin-top:2px;
+    font-size:7px;
+    line-height:1.3;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-story p{
+    margin-top:2px;
+    font-size:5.5px;
+    line-height:1.3;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+    overflow:hidden;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-brief blockquote{
+    margin-top:6px;
+    padding:6px 7px;
+    font-size:5.8px;
+    line-height:1.4;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-brief-tags{
+    margin-top:7px;
+    gap:3px;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-brief-tags span{
+    padding:2px 4px;
+    font-size:5.1px;
+  }
+
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-foot{
+    padding-top:0;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:3px;
+    line-height:1.35;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-foot strong{
+    font-size:6px;
+    line-height:1.3;
+  }
+  .work-detail-card:has(.detail-radar-stage) .detail-radar-foot span{
+    font-size:5.3px;
+    line-height:1.3;
+    text-align:left;
+    white-space:normal;
+  }
+}
+/* END MOBILE DETAIL 04 — AI Radar */
+
+
+/* =========================================================
+   MOBILE DETAIL 05 — Life OS
+   Dedicated phone execution chain. Preserve the same Goal →
+   Project → Decision → Action → Execute → Review logic, but
+   convert the desktop 3×2 map into a vertical mobile system.
+   ========================================================= */
+@media(max-width:759px){
+  .work-detail-card:has(.detail-lifeos-stage) .work-detail-body{
+    grid-template-rows:1000px auto;
+    gap:18px;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .work-detail-preview{
+    grid-row:1;
+    min-height:1000px;
+    overflow:hidden;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .work-detail-copy{
+    grid-row:2;
+  }
+
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-stage{
+    padding:12px;
+    overflow:hidden;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-app{
+    height:auto;
+    min-height:100%;
+    grid-template-rows:auto auto auto;
+    gap:8px;
+  }
+
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-head{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:8px;
+    padding:11px 12px 10px;
+    border-radius:11px;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-eyebrow,
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step small,
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-cycle small,
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-principles small{
+    font-size:5.7px;
+    letter-spacing:.14em;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-head h3{
+    margin-top:5px;
+    font-size:26px;
+    line-height:1;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-head p{
+    margin-top:4px;
+    font-size:7.3px;
+    line-height:1.42;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-cycle{
+    min-width:0;
+    width:100%;
+    display:grid;
+    grid-template-columns:auto auto 1fr;
+    align-items:center;
+    gap:7px;
+    padding:7px 8px;
+    border-radius:8px;
+    text-align:left;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-cycle b{
+    margin-top:0;
+    font-size:10px;
+    line-height:1;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-cycle span{
+    margin-top:0;
+    font-size:5.8px;
+    text-align:right;
+  }
+
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-journey{
+    position:relative;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:none;
+    gap:7px;
+    min-height:0;
+    padding:10px 9px 10px 25px;
+    border-radius:11px;
+    overflow:visible;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-flowlines{
+    display:none;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-journey::before{
+    content:"";
+    position:absolute;
+    left:13px;
+    top:25px;
+    bottom:25px;
+    width:1px;
+    background:linear-gradient(
+      to bottom,
+      var(--los-goal),
+      var(--los-project) 22%,
+      var(--los-task) 56%,
+      var(--los-review) 86%,
+      color-mix(in srgb,var(--los-review) 28%,transparent)
+    );
+    opacity:.34;
+  }
+
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.goal,
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.project,
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.decision,
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.action,
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.execute,
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.review{
+    grid-column:1;
+    grid-row:auto;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step{
+    position:relative;
+    min-width:0;
+    padding:8px 9px 7px;
+    border-radius:9px;
+    box-shadow:none;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step::before{
+    content:"";
+    position:absolute;
+    left:-17px;
+    top:17px;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:var(--step);
+    box-shadow:0 0 0 3px color-mix(in srgb,var(--step) 10%,transparent);
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.decision{
+    padding:0;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.decision::before{
+    background:var(--los-task);
+  }
+
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-stepbar{
+    margin-bottom:5px;
+    gap:6px;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-stepbar small{
+    font-size:5.7px;
+    line-height:1.1;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-stepbar em{
+    padding:2.5px 5px;
+    font-size:5.5px;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step strong{
+    font-size:8.7px;
+    line-height:1.3;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step p{
+    margin-top:4px;
+    font-size:6.2px;
+    line-height:1.38;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+    overflow:hidden;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-props{
+    gap:4px;
+    margin-top:5px;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-props span{
+    padding:2.5px 4px;
+    font-size:5.2px;
+    line-height:1.15;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-scope{
+    gap:5px;
+    margin-top:5px;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-scope span{
+    font-size:5px;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.goal .detail-lifeos-scope i,
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.project .detail-lifeos-scope i,
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.action .detail-lifeos-scope i{
+    width:min(74px,38vw);
+  }
+
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-gate{
+    padding:9px 9px 8px;
+    border-radius:9px;
+    box-shadow:none;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-gate::before{
+    display:none;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-decision-title{
+    min-height:24px;
+    font-size:8.5px;
+    line-height:1.25;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-choice{
+    gap:5px;
+    margin-top:6px;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-choice span{
+    padding:5px 4px;
+    font-size:5.5px;
+    line-height:1.25;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-choice span:first-child::after{
+    display:none;
+  }
+
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-action-focus{
+    margin-top:4px;
+    padding:6px 7px;
+    border-radius:7px;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-action-focus b{
+    font-size:9px;
+    line-height:1.25;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-action-focus span{
+    margin-top:3px;
+    font-size:5.1px;
+  }
+
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-today{
+    gap:4px;
+    margin-top:5px;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-check{
+    grid-template-columns:9px minmax(0,1fr) auto;
+    gap:5px;
+    padding:4px 5px;
+    border-radius:6px;
+    font-size:5.7px;
+    line-height:1.2;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-check i{
+    width:8px;
+    height:8px;
+    border-radius:2px;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-check.is-current i::after{
+    left:0;
+    top:-3px;
+    font-size:7px;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-check b{
+    font-size:5.1px;
+  }
+
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-review-metrics{
+    gap:4px;
+    margin-top:5px;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-review-metrics div{
+    padding:4px 3px;
+    border-radius:6px;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-review-metrics b{
+    font-size:8.5px;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-review-metrics span{
+    margin-top:2px;
+    font-size:5.1px;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-review-insight{
+    margin-top:5px;
+    padding:5px 6px;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-review-insight small{
+    font-size:4.8px;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-review-insight b{
+    margin-top:2px;
+    font-size:5.8px;
+    line-height:1.35;
+  }
+
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-principles{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:4px;
+    padding:7px 2px 0;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-principles b{
+    font-size:6.3px;
+    line-height:1.35;
+  }
+  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-principles span{
+    font-size:5.2px;
+    line-height:1.25;
+  }
+}
+/* END MOBILE DETAIL 05 — Life OS */
+
+
+/* =========================================================
+   MOBILE DETAIL 06 — Echoline
+   Dedicated phone listening studio. Preserve the product UI
+   and listening flow; reorganize desktop panels vertically.
+   ========================================================= */
+@media(max-width:759px){
+  .work-detail-card[data-project="echo"] .work-detail-body{
+    grid-template-rows:760px auto;
+    gap:18px;
+  }
+  .work-detail-card[data-project="echo"] .work-detail-preview{
+    grid-row:1;
+    min-height:760px;
+    overflow:hidden;
+  }
+  .work-detail-card[data-project="echo"] .work-detail-copy{
+    grid-row:2;
+  }
+
+  .work-detail-card[data-project="echo"] .detail-echo-stage{
+    padding:12px;
+    overflow:hidden;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-app{
+    height:auto;
+    min-height:100%;
+    overflow:hidden;
+    border-radius:13px;
+  }
+
+  .work-detail-card[data-project="echo"] .detail-echo-header{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    gap:9px 8px;
+    align-items:start;
+    padding:11px 11px 8px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-brand{
+    grid-column:1;
+    min-width:0;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-brand small{
+    font-size:6px;
+    letter-spacing:.17em;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-brand strong{
+    margin-top:4px;
+    font-size:24px;
+    line-height:1;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-cta{
+    grid-column:2;
+    grid-row:1;
+    height:28px;
+    padding:0 10px;
+    border-radius:9px;
+    font-size:7px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-actions{
+    grid-column:1 / -1;
+    grid-row:2;
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:5px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-pill{
+    min-width:0;
+    width:100%;
+    height:27px;
+    padding:0 7px;
+    border-radius:8px;
+    font-size:6.5px;
+  }
+
+  .work-detail-card[data-project="echo"] .detail-echo-shell{
+    padding:0 10px 10px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-player{
+    padding:10px 10px 9px;
+    border-radius:11px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-file{
+    gap:6px;
+    font-size:6.4px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-file b{
+    font-size:8.5px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-trackline{
+    margin-top:8px;
+    grid-template-columns:30px minmax(0,1fr) 30px;
+    gap:6px;
+    font-size:6px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-track{
+    height:8px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-track::before,
+  .work-detail-card[data-project="echo"] .detail-echo-track i{
+    height:5px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-track i::after{
+    width:9px;
+    height:9px;
+    right:-3px;
+  }
+
+  .work-detail-card[data-project="echo"] .detail-echo-controls{
+    margin-top:9px;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:5px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-chip{
+    min-width:0;
+    width:100%;
+    height:25px;
+    padding:0 4px;
+    border-radius:8px;
+    font-size:6.2px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-hint{
+    display:none;
+  }
+
+  .work-detail-card[data-project="echo"] .detail-echo-speed,
+  .work-detail-card[data-project="echo"] .detail-echo-offset{
+    margin-top:8px;
+    gap:5px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-label{
+    width:100%;
+    font-size:5.8px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-mini,
+  .work-detail-card[data-project="echo"] .detail-echo-ghost{
+    height:22px;
+    padding:0 7px;
+    border-radius:7px;
+    font-size:5.8px;
+  }
+
+  .work-detail-card[data-project="echo"] .detail-echo-grid{
+    margin-top:8px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:8px;
+    height:auto;
+    flex:none;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-panel{
+    min-height:0;
+    overflow:hidden;
+    border-radius:11px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-panelhead{
+    gap:7px;
+    padding:9px 10px 7px;
+    font-size:6px;
+    line-height:1.25;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-panelhead > span{
+    max-width:58%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    text-align:right;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-panelhead b{
+    margin-top:3px;
+    font-size:10px;
+    line-height:1.1;
+  }
+
+  .work-detail-card[data-project="echo"] .detail-echo-lesson{
+    padding:5px 10px 0;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-sentence-cn{
+    font-size:14px;
+    line-height:1.3;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-sentence-en{
+    margin-top:5px;
+    font-size:11px;
+    line-height:1.3;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-divider{
+    margin:9px 10px 0;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-mode{
+    padding:8px 10px 9px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-modehead{
+    gap:6px;
+    font-size:5.7px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-mode p{
+    margin-top:5px;
+    font-size:6.5px;
+    line-height:1.45;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-textarea{
+    margin-top:7px;
+    height:42px;
+    padding:8px 9px;
+    border-radius:8px;
+    font-size:7px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-bottomactions{
+    margin-top:6px;
+    gap:6px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-submit,
+  .work-detail-card[data-project="echo"] .detail-echo-cancel{
+    height:24px;
+    padding:0 10px;
+    font-size:6.5px;
+  }
+
+  .work-detail-card[data-project="echo"] .detail-echo-panel--right{
+    display:flex;
+    flex-direction:column;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-list{
+    flex:none;
+    min-height:0;
+    overflow:visible;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-listrow,
+  .work-detail-card[data-project="echo"] .detail-echo-hardrow{
+    grid-template-columns:20px minmax(0,1fr);
+    gap:6px;
+    padding:7px 9px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-listrow em,
+  .work-detail-card[data-project="echo"] .detail-echo-hardrow em{
+    font-size:5.6px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-listrow b,
+  .work-detail-card[data-project="echo"] .detail-echo-hardrow b{
+    font-size:6.7px;
+    line-height:1.35;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-listrow span,
+  .work-detail-card[data-project="echo"] .detail-echo-hardrow span{
+    margin-top:3px;
+    font-size:5.4px;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-listrow:nth-child(3){
+    display:none;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-sidebottom{
+    flex:none;
+    min-height:0;
+    overflow:hidden;
+  }
+  .work-detail-card[data-project="echo"] .detail-echo-hardlist{
+    overflow:hidden;
+  }
+}
+/* END MOBILE DETAIL 06 — Echoline */
+
+
+
+/* =========================================================
+   MOBILE DETAIL FINAL RHYTHM — shared shell only
+   Keep all six approved phone previews intact. Normalize the
+   copy rhythm and scrolling behavior beneath each preview.
+   ========================================================= */
+@media(max-width:759px){
+  .work-detail-body{
+    overscroll-behavior:contain;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .work-detail-copy{
+    width:100%;
+    max-width:none;
+    padding:2px 2px 24px;
+  }
+
+  .work-detail-kicker{
+    font-size:7.5px;
+    line-height:1.4;
+    letter-spacing:.20em;
+  }
+
+  .work-detail-copy h2{
+    margin-top:10px;
+    font-size:clamp(30px,9vw,34px);
+    line-height:1.04;
+    letter-spacing:-.03em;
+  }
+
+  .work-detail-tagline{
+    margin-top:11px;
+    font-size:13px;
+    line-height:1.64;
+  }
+
+  .work-detail-description{
+    margin-top:10px;
+    max-width:none;
+    font-size:10px;
+    line-height:1.74;
+  }
+
+  .work-detail-facts{
+    margin-top:17px;
+    gap:9px;
+  }
+
+  .work-detail-fact{
+    grid-template-columns:58px minmax(0,1fr);
+    gap:12px;
+    padding-top:9px;
+  }
+
+  .work-detail-fact dt{
+    font-size:7px;
+    line-height:1.45;
+  }
+
+  .work-detail-fact dd{
+    font-size:9px;
+    line-height:1.55;
+  }
+
+  .work-detail-tags{
+    margin-top:17px;
+    gap:6px;
+  }
+
+  .work-detail-tags span{
+    padding:5px 8px;
+  }
+
+  .work-detail-actions{
+    margin-top:18px;
+    gap:18px;
+    padding-bottom:2px;
+  }
+}
+/* END MOBILE DETAIL FINAL RHYTHM */
+
+/* =========================================================
+   MOBILE NAVIGATION — compact timeline menu
+   Keeps the 100vh stage clear while restoring ABOUT / WORKS /
+   EXPLORING access on phones. Desktop navigation is untouched.
+   ========================================================= */
+.mobile-nav-toggle,
+.mobile-nav-panel{display:none}
+
+@media(max-width:860px){
+  .nav-actions{gap:7px}
+
+  .mobile-nav-toggle{
+    appearance:none;
+    min-height:27px;
+    padding:0 9px;
+    border:1px solid var(--site-line-soft);
+    border-radius:999px;
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    background:var(--site-surface-soft);
+    color:var(--site-faint);
+    font:inherit;
+    font-size:8px;
+    letter-spacing:.16em;
+    cursor:pointer;
+    transition:border-color .22s ease,background .22s ease,color .22s ease;
+  }
+  .mobile-nav-toggle:focus-visible{
+    outline:1px solid var(--site-progress);
+    outline-offset:3px;
+  }
+  .mobile-nav-toggle-dot{
+    width:5px;height:5px;border-radius:50%;
+    border:1px solid currentColor;
+    background:transparent;
+    transition:background .22s ease,border-color .22s ease,box-shadow .22s ease;
+  }
+  .mobile-nav-toggle[aria-expanded="true"]{
+    color:var(--site-ink-soft);
+    border-color:var(--site-line);
+    background:var(--site-surface);
+  }
+  .mobile-nav-toggle[aria-expanded="true"] .mobile-nav-toggle-dot,
+  html[data-theme="light"] .mobile-nav-toggle-dot{
+    background:var(--site-point);
+    border-color:var(--site-point);
+    box-shadow:0 0 10px var(--site-glow);
+  }
+
+  .mobile-nav-panel{
+    position:absolute;
+    top:58px;
+    right:20px;
+    z-index:24;
+    width:168px;
+    padding:6px;
+    display:grid;
+    gap:2px;
+    border:1px solid var(--site-line-soft);
+    border-radius:14px;
+    background:var(--site-surface);
+    box-shadow:0 16px 44px rgba(0,0,0,.16);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    opacity:0;
+    transform:translateY(-6px) scale(.985);
+    transform-origin:top right;
+    pointer-events:none;
+    transition:opacity .18s ease,transform .22s cubic-bezier(.2,.7,.2,1);
+  }
+  html[data-theme="light"] .mobile-nav-panel{
+    box-shadow:0 14px 38px rgba(23,29,32,.09);
+  }
+  .mobile-nav-panel.is-open{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    pointer-events:auto;
+  }
+  .mobile-nav-link{
+    width:100%;
+    min-height:38px;
+    padding:0 9px;
+    display:grid;
+    grid-template-columns:24px minmax(0,1fr);
+    align-items:center;
+    gap:8px;
+    border-radius:9px;
+    text-align:left;
+    color:var(--site-muted);
+    transition:background .18s ease,color .18s ease;
+  }
+  .mobile-nav-link span{
+    color:var(--site-faint);
+    font-size:7px;
+    letter-spacing:.16em;
+  }
+  .mobile-nav-link b{
+    color:inherit;
+    font-size:9px;
+    font-weight:500;
+    letter-spacing:.18em;
+  }
+  .mobile-nav-link:active,
+  .mobile-nav-link:focus-visible{
+    color:var(--site-ink);
+    background:var(--site-surface-soft);
+  }
+}
+
+/* =========================================================
+   PC SCENE COPY — approved scene-integrated layout
+   Desktop only. Mobile keeps the existing heading composition.
+   Works / Method / Exploring share the same hierarchy:
+   chapter label in the top-right state pill, scene copy inside.
+   ========================================================= */
+@media (min-width:861px){
+  /* Works */
+  .works-stage-title{
+    inset:0;
+    width:auto;
+    pointer-events:none;
+  }
+  .works-stage-title .eyebrow{
+    display:none;
+  }
+  .works-stage-title h2{
+    position:absolute;
+    left:50.8%;
+    top:27.5%;
+    margin:0;
+    width:auto;
+    font-size:18px;
+    line-height:1.55;
+    letter-spacing:.08em;
+    font-weight:400;
+    writing-mode:vertical-rl;
+    text-orientation:mixed;
+    color:var(--site-ink-soft);
+    transform:translateX(-50%);
+  }
+  .works-stage-title h2::before{
+    content:"";
+    display:block;
+    width:1px;
+    height:30px;
+    margin:0 auto 12px;
+    background:linear-gradient(to bottom,transparent,var(--site-line-soft));
+  }
+  .works-stage-title p{
+    position:absolute;
+    left:52.7%;
+    top:39.5%;
+    margin:0;
+    max-width:none;
+    font-size:10px;
+    line-height:1.85;
+    letter-spacing:.08em;
+    writing-mode:vertical-rl;
+    text-orientation:mixed;
+    text-align:left;
+    color:var(--site-muted);
+  }
+
+  /* Method — scene-integrated copy from the approved PC demo.
+     HOW I WORK / 方法 remains in the top-right global state pill. */
+  #methodLayer .module-inner{
+    padding:0;
+  }
+  #methodLayer .module-eyebrow{
+    display:none;
+  }
+  #methodLayer .module-title{
+    position:absolute;
+    left:20%;
+    top:69.1%;
+    transform:none;
+    margin:0;
+    width:60%;
+    max-width:none;
+    text-align:center;
+    font-size:20px;
+    line-height:1.35;
+    letter-spacing:.025em;
+    font-weight:400;
+    writing-mode:horizontal-tb;
+    color:var(--site-ink-soft);
+    white-space:normal;
+  }
+  #methodLayer .module-title br{display:none}
+  #methodLayer .module-title::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:-18px;
+    width:1px;
+    height:10px;
+    background:var(--site-line-soft);
+  }
+  #methodLayer .module-lead{
+    position:absolute;
+    left:30%;
+    top:74%;
+    transform:none;
+    margin:0;
+    width:40%;
+    max-width:none;
+    text-align:center;
+    font-size:10px;
+    line-height:1.8;
+    letter-spacing:.055em;
+    writing-mode:horizontal-tb;
+    color:var(--site-muted);
+    white-space:normal;
+  }
+
+  /* Exploring — scene-integrated copy from the approved PC demo.
+     Chapter label remains in the top-right global state pill. */
+  #exploreLayer .module-inner{
+    padding:0;
+  }
+  #exploreLayer .module-eyebrow{
+    display:none;
+  }
+  #exploreLayer .module-title{
+    position:absolute;
+    left:calc(48.5% - 120px);
+    right:auto;
+    top:37.5%;
+    margin:0;
+    width:max-content;
+    max-width:34vw;
+    font-size:21px;
+    line-height:1.35;
+    letter-spacing:.02em;
+    font-weight:400;
+    text-align:left;
+    writing-mode:horizontal-tb;
+    color:var(--site-ink-soft);
+  }
+  #exploreLayer .module-title::before{
+    content:none;
+  }
+  #exploreLayer .module-title::after{
+    content:"";
+    position:absolute;
+    left:calc(100% + 18px);
+    top:50%;
+    width:42px;
+    height:1px;
+    background:linear-gradient(90deg,var(--site-line),var(--site-line-soft));
+  }
+  #exploreLayer .module-lead{
+    position:absolute;
+    left:calc(48.5% - 120px);
+    right:auto;
+    top:42.8%;
+    margin:0;
+    width:275px;
+    max-width:none;
+    font-size:10px;
+    line-height:1.8;
+    letter-spacing:.05em;
+    text-align:left;
+    writing-mode:horizontal-tb;
+    color:var(--site-muted);
+  }
+}
+
+/* PERFORMANCE — pause CSS animations while their surfaces are not visible */
+.card-layer:not(.animations-active) .works-card,
+.card-layer:not(.animations-active) .works-card::before,
+.card-layer:not(.animations-active) .works-card::after,
+.card-layer:not(.animations-active) .works-card *,
+.card-layer:not(.animations-active) .works-card *::before,
+.card-layer:not(.animations-active) .works-card *::after,
+.work-detail-layer:not(.is-open) .work-detail-preview,
+.work-detail-layer:not(.is-open) .work-detail-preview::before,
+.work-detail-layer:not(.is-open) .work-detail-preview::after,
+.work-detail-layer:not(.is-open) .work-detail-preview *,
+.work-detail-layer:not(.is-open) .work-detail-preview *::before,
+.work-detail-layer:not(.is-open) .work-detail-preview *::after{
+  animation-play-state:paused !important;
+}
+
+/* END MOBILE NAVIGATION */

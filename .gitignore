@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Local tool state
+.memora/
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+
+# Node / build artifacts (just in case)
+node_modules/
+dist/
+*.log
+
+# Local docs (not to be committed)
+notes/
+drafts/

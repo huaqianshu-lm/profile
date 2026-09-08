@@ -1,0 +1,299 @@
+/* Detail shell boundary: exact base rules retained during cascade-equivalent migration. */
+.work-detail-layer{
+  position:absolute;
+  inset:0;
+  z-index:60;
+  pointer-events:none;
+}
+.work-detail-layer.is-open{
+  pointer-events:auto;
+}
+.work-detail-dim{
+  position:absolute;
+  inset:0;
+  background:rgba(4,6,8,.22);
+  opacity:0;
+  transition:opacity .42s ease;
+}
+.work-detail-layer.is-open .work-detail-dim{
+  opacity:1;
+}
+
+.work-detail-card{
+  position:absolute;
+  overflow:hidden;
+  border:1px solid rgba(238,233,216,.15);
+  border-radius:22px;
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.052),rgba(255,255,255,.018)),
+    radial-gradient(circle at 22% 20%,rgba(238,228,200,.045),transparent 36%),
+    #0a0d10;
+  box-shadow:
+    0 34px 120px rgba(0,0,0,.50),
+    inset 0 1px 0 rgba(255,255,255,.035);
+  opacity:0;
+  transition:
+    left .72s cubic-bezier(.20,.72,.20,1),
+    top .72s cubic-bezier(.20,.72,.20,1),
+    width .72s cubic-bezier(.20,.72,.20,1),
+    height .72s cubic-bezier(.20,.72,.20,1),
+    border-radius .72s cubic-bezier(.20,.72,.20,1),
+    opacity .18s ease;
+  will-change:left,top,width,height,border-radius;
+}
+.work-detail-layer.is-open .work-detail-card{
+  opacity:1;
+}
+.work-detail-card.is-expanded{
+  border-radius:28px;
+}
+.work-detail-card::before{
+  content:"";
+  position:absolute;
+  left:24px;right:24px;top:0;
+  height:1px;
+  z-index:8;
+  background:linear-gradient(90deg,transparent,rgba(238,233,216,.19),transparent);
+}
+
+.work-detail-topbar{
+  position:absolute;
+  left:26px;right:26px;top:22px;
+  z-index:12;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  opacity:0;
+  transform:translateY(7px);
+  transition:opacity .32s ease .34s,transform .32s ease .34s;
+}
+.work-detail-card.is-expanded .work-detail-topbar{
+  opacity:1;
+  transform:translateY(0);
+}
+.work-detail-index{
+  font-size:8px;
+  letter-spacing:.22em;
+  color:#666c68;
+}
+.work-detail-close{
+  appearance:none;
+  border:0;
+  padding:7px 0 7px 14px;
+  background:none;
+  color:#929894;
+  font:inherit;
+  font-size:8px;
+  letter-spacing:.18em;
+  cursor:pointer;
+}
+.work-detail-close:hover{
+  color:#e1dfd7;
+}
+
+.work-detail-body{
+  position:absolute;
+  inset:66px 26px 26px;
+  display:grid;
+  grid-template-columns:minmax(0,1.35fr) minmax(290px,.75fr);
+  gap:clamp(28px,4vw,66px);
+  align-items:stretch;
+}
+.work-detail-preview{
+  position:relative;
+  min-width:0;
+  overflow:hidden;
+  border:1px solid rgba(238,233,216,.09);
+  border-radius:19px;
+  background:
+    radial-gradient(circle at 40% 48%,rgba(247,229,183,.16),transparent 20%),
+    radial-gradient(circle at 68% 34%,rgba(219,231,235,.07),transparent 18%),
+    linear-gradient(145deg,#12161b,#080a0d);
+  opacity:0;
+  transform:scale(.98);
+  transition:opacity .40s ease .28s,transform .55s cubic-bezier(.2,.7,.2,1) .25s;
+}
+.work-detail-card.is-expanded .work-detail-preview{
+  opacity:1;
+  transform:scale(1);
+}
+.detail-echo-core{
+  position:absolute;
+  left:50%;top:48%;
+  width:8px;height:8px;
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  background:#ded6be;
+  box-shadow:
+    0 0 20px rgba(238,228,200,.46),
+    0 0 70px rgba(238,228,200,.10);
+}
+.detail-echo-ring{
+  position:absolute;
+  left:50%;top:48%;
+  width:110px;height:110px;
+  border-radius:50%;
+  border:1px solid rgba(238,233,216,.13);
+  transform:translate(-50%,-50%) scale(.25);
+  opacity:0;
+  animation:detailEcho 4.2s ease-out infinite;
+}
+.detail-echo-ring:nth-of-type(2){animation-delay:1.4s}
+.detail-echo-ring:nth-of-type(3){animation-delay:2.8s}
+@keyframes detailEcho{
+  0%{opacity:.55;transform:translate(-50%,-50%) scale(.25)}
+  70%{opacity:.10}
+  100%{opacity:0;transform:translate(-50%,-50%) scale(4.8)}
+}
+.detail-echo-caption{
+  position:absolute;
+  left:20px;bottom:18px;
+  font-size:8px;
+  letter-spacing:.18em;
+  color:#626864;
+  text-transform:uppercase;
+}
+
+.work-detail-copy{
+  align-self:center;
+  opacity:0;
+  transform:translateY(14px);
+  transition:opacity .40s ease .39s,transform .45s ease .39s;
+}
+.work-detail-card.is-expanded .work-detail-copy{
+  opacity:1;
+  transform:translateY(0);
+}
+.work-detail-kicker{
+  font-size:8px;
+  letter-spacing:.24em;
+  color:#696f6b;
+  text-transform:uppercase;
+}
+.work-detail-copy h2{
+  margin:13px 0 0;
+  color:#f1efe8;
+  font-size:clamp(38px,4.7vw,68px);
+  line-height:.98;
+  letter-spacing:-.035em;
+  font-weight:500;
+}
+.work-detail-tagline{
+  margin:18px 0 0;
+  color:#c6c4bb;
+  font-size:15px;
+  line-height:1.75;
+}
+.work-detail-description{
+  margin:13px 0 0;
+  color:#7f8581;
+  font-size:11px;
+  line-height:1.8;
+  max-width:360px;
+}
+.work-detail-facts{
+  margin-top:26px;
+  display:grid;
+  gap:11px;
+}
+.work-detail-fact{
+  display:grid;
+  grid-template-columns:68px 1fr;
+  gap:14px;
+  align-items:start;
+  padding-top:10px;
+  border-top:1px solid rgba(255,255,255,.055);
+}
+.work-detail-fact dt{
+  margin:0;
+  color:#5f6561;
+  font-size:7px;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+}
+.work-detail-fact dd{
+  margin:0;
+  color:#aaaEaa;
+  font-size:9px;
+  line-height:1.5;
+}
+.work-detail-actions{
+  margin-top:28px;
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+.work-detail-action{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:#d2d0c7;
+  font-size:9px;
+  letter-spacing:.10em;
+  padding-bottom:5px;
+  border-bottom:1px solid rgba(238,233,216,.13);
+}
+.work-detail-action.is-placeholder{
+  color:#666c68;
+}
+
+.detail-hint{
+  position:absolute;
+  left:50%;
+  bottom:25px;
+  z-index:64;
+  transform:translateX(-50%);
+  font-size:7px;
+  letter-spacing:.18em;
+  color:#505652;
+  opacity:0;
+  transition:opacity .3s ease .6s;
+  pointer-events:none;
+}
+.work-detail-layer.is-open .detail-hint{
+  opacity:1;
+}
+
+@media(max-width:860px){
+  .work-detail-card.is-expanded{
+    border-radius:22px;
+  }
+  .work-detail-topbar{
+    left:18px;right:18px;top:16px;
+  }
+  .work-detail-body{
+    inset:52px 18px 18px;
+    grid-template-columns:1fr;
+    grid-template-rows:minmax(210px,.9fr) auto;
+    gap:20px;
+    overflow:auto;
+  }
+  .work-detail-copy{
+    align-self:start;
+    padding-bottom:12px;
+  }
+  .work-detail-copy h2{
+    font-size:36px;
+  }
+  .work-detail-tagline{
+    margin-top:12px;
+    font-size:13px;
+  }
+  .work-detail-description{
+    font-size:10px;
+  }
+  .work-detail-facts{
+    margin-top:18px;
+  }
+  .work-detail-actions{
+    margin-top:20px;
+  }
+  .detail-hint{
+    display:none;
+  }
+}
+
+
+/* =========================================================
+   WORK DETAIL SYSTEM V12 — six project preview languages
+   ========================================================= */
