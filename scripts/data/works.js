@@ -47,8 +47,7 @@ export const WORKS = Object.freeze([
     tags:['原创音乐','摇滚','毕业十年','AI辅助创作','Unframed','中文独立摇滚'],
     url:'',
     media:{
-      // 当前演示文件与 MP3 放在同一目录；正式部署时建议改为 '/audio/unframed.mp3'
-      audio:'./Unframed.mp3',
+      audio:'./assets/Unframed.mp3',
       cover:''
     },
 

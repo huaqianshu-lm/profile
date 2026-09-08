@@ -84,7 +84,7 @@ export function renderVideoPreview({ item, preview }) {
             </div>
             <div class="detail-harness-screen">
               <video class="detail-harness-video" controls playsinline preload="metadata">
-                <source src="01-what-is-codex.mp4" type="video/mp4">
+                <source src="./assets/01-what-is-codex.mp4" type="video/mp4">
                 当前浏览器无法播放此视频。
               </video>
             </div>

@@ -22,7 +22,10 @@
 
 ```text
 profile/
-├── 01-what-is-codex.mp4        Video Production Harness 原始视频
+├── assets/                     媒体资源
+│   ├── 01-what-is-codex.mp4    Video Production Harness 原始视频
+│   ├── Unframed.lrc            Unframed 歌词文件
+│   └── Unframed.mp3            Unframed 原始音频
 ├── CLAUDE.md                   本执行规范
 ├── PROJECT_HANDOFF.md          完整设计与交接依据
 ├── ROADMAP.md                  当前项目进度
@@ -60,8 +63,6 @@ profile/
 │   ├── detail-shell.css         详情壳层样式边界
 │   ├── detail-previews.css      详情预览样式边界
 │   └── responsive.css            原始末段覆盖样式块
-├── Unframed.lrc                Unframed 歌词文件
-├── Unframed.mp3                Unframed 原始音频
 └── index.html                  单页站点 HTML 与唯一 module 入口
 ```
 
