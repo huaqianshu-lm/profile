@@ -101,3 +101,23 @@ export function renderExploring(frame) {
     * (1 - smooth(windows.exploreOriginOutStart, windows.exploreOriginOutEnd, siteProgress)) * exploreOut;
   return false;
 }
+
+export function resetExploring({ dom }) {
+  dom.exploreLayer.style.opacity = 0;
+  dom.exploreHeaders.forEach(element => {
+    element.style.opacity = 0;
+    element.style.transform = 'translateY(8px)';
+  });
+  dom.exploreFragments.forEach(fragment => {
+    fragment.style.opacity = 0;
+  });
+  dom.exploreOrigin.style.opacity = 0;
+  dom.exploreField.querySelectorAll('.explore-link').forEach(link => {
+    link.style.opacity = 0;
+  });
+  dom.exploreField.querySelectorAll('.explore-seed').forEach(seed => {
+    seed.style.opacity = 0;
+    seed.querySelector('.seed-copy').style.opacity = 0;
+    seed.querySelector('.seed-dot').style.opacity = 0;
+  });
+}

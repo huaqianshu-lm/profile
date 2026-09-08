@@ -144,4 +144,24 @@ export function renderWorks(frame) {
   return false;
 }
 
+export function resetWorks({ dom, cards, nodes, appState }) {
+  dom.cardLayer.style.opacity = 0;
+  dom.cardLayer.style.transform = 'scale(.982)';
+  dom.cardLayer.style.filter = 'blur(3px)';
+  dom.nodeLayer.style.opacity = 0;
+  dom.bridge.style.opacity = 0;
+  dom.worksStageTitle.style.opacity = 0;
+  dom.worksStageTitle.style.transform = 'translateY(10px)';
+  appState.hoveredWorkIndex = -1;
+
+  nodes.forEach(({ wrap }) => {
+    wrap.style.opacity = 0;
+  });
+  cards.forEach(card => {
+    card.style.opacity = 0;
+    card.style.pointerEvents = 'none';
+    card.classList.remove('morphing', 'is-hovered');
+  });
+}
+
 export { getWorksFinalGeometry };

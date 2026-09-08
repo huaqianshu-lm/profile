@@ -3,7 +3,7 @@ export function createDetailController({
   items,
   cards,
   dom,
-  getProgress,
+  canOpenWork,
   getViewport,
   buildDetailPreview,
   cleanupDetailAudio,
@@ -58,9 +58,9 @@ export function createDetailController({
   const refreshOrigin = workIndex => {
     if (state.detailMode) return;
     const source = cards[workIndex];
-    const siteProgress = getProgress();
-    if (!source || siteProgress < .31 || siteProgress > .50) return;
+    if (!source || !canOpenWork()) return;
     const rect = source.getBoundingClientRect();
+    if (rect.width <= 0 || rect.height <= 0) return;
     state.detailReturnRect = { left: rect.left, top: rect.top, width: rect.width, height: rect.height };
     layer.classList.remove('is-open');
     layer.setAttribute('aria-hidden', 'true');
@@ -92,13 +92,13 @@ export function createDetailController({
 
   const open = workIndex => {
     if (state.detailMode) return;
-    const siteProgress = getProgress();
-    if (siteProgress < .31 || siteProgress > .50) return;
+    if (!canOpenWork()) return;
     const source = cards[workIndex];
     const item = items[workIndex];
     if (!source || !item) return;
     render(workIndex);
     const rect = source.getBoundingClientRect();
+    if (rect.width <= 0 || rect.height <= 0) return;
     state.detailMode = true;
     state.hoveredWorkIndex = -1;
     state.selectedWorkIndex = workIndex;

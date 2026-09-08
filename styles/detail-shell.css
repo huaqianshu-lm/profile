@@ -293,6 +293,25 @@
   }
 }
 
+html[data-theme="light"] .work-detail-dim{background:rgba(23,29,32,.07)}
+html[data-theme="light"] .work-detail-card{border-color:var(--site-line);background:#fff;box-shadow:0 28px 88px rgba(23,29,32,.10),inset 0 1px 0 #fff}
+html[data-theme="light"] .work-detail-card::before{background:linear-gradient(90deg,transparent,rgba(78,88,93,.18),transparent)}
+html[data-theme="light"] .work-detail-index{color:var(--site-faint)}
+html[data-theme="light"] .work-detail-close{color:var(--site-muted)}
+html[data-theme="light"] .work-detail-close:hover{color:var(--site-ink)}
+html[data-theme="light"] .work-detail-preview{border-color:var(--site-line)}
+html[data-theme="light"] .work-detail-kicker{color:var(--site-faint)}
+html[data-theme="light"] .work-detail-copy h2{color:var(--site-ink)}
+html[data-theme="light"] .work-detail-tagline{color:var(--site-ink-soft)}
+html[data-theme="light"] .work-detail-description{color:var(--site-muted)}
+html[data-theme="light"] .work-detail-fact{border-top-color:var(--site-line-soft)}
+html[data-theme="light"] .work-detail-fact dt{color:var(--site-faint)}
+html[data-theme="light"] .work-detail-fact dd{color:var(--site-muted)}
+html[data-theme="light"] .work-detail-tags span{border-color:var(--site-line);color:var(--site-muted);background:var(--site-surface)}
+html[data-theme="light"] .work-detail-action{color:var(--site-ink-soft);border-bottom-color:var(--site-line)}
+html[data-theme="light"] .work-detail-action.is-placeholder,
+html[data-theme="light"] .detail-hint{color:var(--site-faint)}
+
 
 /* =========================================================
    WORK DETAIL SYSTEM V12 — six project preview languages

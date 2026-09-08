@@ -211,6 +211,10 @@ export const TIMELINE_OVERLAY_WINDOWS = Object.freeze({
   seedGrowCanvasEnd: .485
 });
 
+export function canOpenWorkAtProgress(progress, windows = TIMELINE_WINDOWS) {
+  return progress >= windows.workOpenStart && progress <= windows.workOpenEnd;
+}
+
 export function getSeedGrowCanvasBackdropState(siteProgress) {
   return Object.freeze({
     shouldDraw: siteProgress < TIMELINE_OVERLAY_WINDOWS.seedGrowCanvasEnd,

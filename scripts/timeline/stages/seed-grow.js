@@ -174,3 +174,12 @@ export function renderSeedGrowStage(frame) {
   dom.copy.style.pointerEvents = 'none';
   return false;
 }
+
+export function resetSeedGrowStage({ dom }) {
+  dom.copy.style.opacity = 0;
+  dom.copy.style.filter = 'blur(7px)';
+  dom.copy.style.transform = 'translate(-50%,calc(-50% - 26px))';
+  dom.copy.style.pointerEvents = 'none';
+  dom.seedNote.style.opacity = 0;
+  dom.seedNote.style.transform = 'translate(-50%,88px)';
+}

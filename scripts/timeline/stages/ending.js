@@ -65,3 +65,18 @@ export function renderEnding(frame) {
   dom.endContent.style.transform = `translate(-50%,-50%) scale(${.985 + headlineIn * .015})`;
   return false;
 }
+
+export function resetEnding({ dom }) {
+  dom.endLayer.style.opacity = 0;
+  dom.endGatherDots.forEach(dot => {
+    dot.style.opacity = 0;
+  });
+  dom.endPoint.style.opacity = 0;
+  dom.endPoint.classList.remove('is-rippling');
+  dom.endHeadline.style.opacity = 0;
+  dom.endName.style.opacity = 0;
+  dom.endTags.style.opacity = 0;
+  dom.endContact.style.opacity = 0;
+  dom.endContact.style.pointerEvents = 'none';
+  dom.endWhisper.style.opacity = 0;
+}

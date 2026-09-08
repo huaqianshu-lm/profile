@@ -29,8 +29,9 @@ profile/
 ├── CLAUDE.md                   本执行规范
 ├── PROJECT_HANDOFF.md          完整设计与交接依据
 ├── ROADMAP.md                  当前项目进度
-├── STATIC_NATIVE_REFACTOR_PLAN.md 静态原生模块化与动画收敛基线方案
-├── STATIC_NATIVE_REFACTOR_REMEDIATION_PLAN.md 静态重构验收整改方案
+├── drafts/                     本地方案与草稿（不纳入版本控制）
+│   ├── STATIC_NATIVE_REFACTOR_PLAN.md 静态原生模块化与动画收敛基线方案
+│   └── STATIC_NATIVE_REFACTOR_REMEDIATION_PLAN.md 静态重构验收整改方案
 ├── scripts/                    原生 ES Modules 源码
 │   ├── app.js                  单页启动入口与当前运行编排
 │   ├── core/dom.js             集中 DOM 注册表
@@ -68,8 +69,9 @@ profile/
 
 - 保持静态单页形态：原生 JavaScript、Canvas 和浏览器 Media API。
 - 不引入 React、Vue、构建工具、包管理器、后端、数据库或 SPA 路由。
-- 默认只修改 `index.html`；禁止为试验创建 `v2`、副本页或平行实现。
+- 按目标职责模块最小修改：结构与静态内容在 `index.html`，交互与时间线在 `scripts/`，视觉与响应式在 `styles/`；禁止为试验创建 `v2`、副本页或平行实现。
 - 视频必须通过原始 MP4 文件引用，不得 Base64 内嵌。二维码可用 Base64，favicon 可用 data URI。
+- `CLAUDE.md`、`PROJECT_HANDOFF.md` 与 `ROADMAP.md` 是项目核心文档，须纳入版本控制；所有未来重构方案统一保存于 `drafts/`，作为本地草稿保持忽略，不得放入项目根目录。
 
 ## 页面结构与导航
 

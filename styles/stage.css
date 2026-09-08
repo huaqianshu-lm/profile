@@ -29,6 +29,7 @@ canvas{position:absolute;inset:0;width:100%;height:100%;z-index:1}
 .copy{
   position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
   width:min(820px,calc(100% - 40px));text-align:center;z-index:10;pointer-events:none;
+  opacity:0;filter:blur(7px);
 }
 .kicker{font-size:10px;letter-spacing:.42em;color:#7f847f;margin-bottom:16px;text-transform:uppercase}
 .hero h1{
@@ -304,5 +305,39 @@ html,body{
 .method-source b{
   color:#c6c4bb;
 }
+
+/* Theme closure for the fixed stage. These rules follow the dark boundary
+   declarations above, so the shared light tokens are not overwritten later. */
+html[data-theme="light"] .sticky{background:#fff}
+html[data-theme="light"] .sticky::before{opacity:.085}
+html[data-theme="light"] .sticky::after{box-shadow:var(--site-vignette)}
+html[data-theme="light"] .nav,
+html[data-theme="light"] .nav-right,
+html[data-theme="light"] .phase,
+html[data-theme="light"] .progress,
+html[data-theme="light"] .scroll{color:var(--site-faint)}
+html[data-theme="light"] .brand,
+html[data-theme="light"] .slogan{color:var(--site-ink-soft)}
+html[data-theme="light"] .progress-line{background:var(--site-line-soft)}
+html[data-theme="light"] .progress-line i{background:linear-gradient(90deg,var(--site-progress-soft),var(--site-progress))}
+html[data-theme="light"] .scroll::before{background:var(--site-point);box-shadow:0 0 14px var(--site-glow)}
+html[data-theme="light"] .kicker,
+html[data-theme="light"] .seed-note{color:var(--site-faint)}
+html[data-theme="light"] .hero h1{color:var(--site-ink)}
+html[data-theme="light"] .intro{color:var(--site-muted)}
+html[data-theme="light"] .anchor-dot{background:var(--site-point);box-shadow:0 0 14px var(--site-glow)}
+html[data-theme="light"] .leader{background:linear-gradient(90deg,color-mix(in srgb,var(--site-ink) 22%,transparent),color-mix(in srgb,var(--site-ink) 3.5%,transparent))}
+html[data-theme="light"] .g-node,
+html[data-theme="light"] .method-center,
+html[data-theme="light"] .explore-origin,
+html[data-theme="light"] .explore-fragment,
+html[data-theme="light"] .end-gather-dot{background:var(--site-point);box-shadow:0 0 15px var(--site-glow)}
+html[data-theme="light"] .g-line{background:var(--site-line)}
+html[data-theme="light"] .method-line,
+html[data-theme="light"] .explore-link{background:linear-gradient(90deg,color-mix(in srgb,var(--site-ink) 18%,transparent),var(--site-line-soft))}
+html[data-theme="light"] .label{border-color:var(--site-line);background:var(--site-surface);box-shadow:0 10px 28px rgba(23,29,32,.055)}
+html[data-theme="light"] .label .top b{color:var(--site-ink-soft)}
+html[data-theme="light"] .label .top small{color:var(--site-faint)}
+html[data-theme="light"] .label .sub{color:var(--site-muted)}
 
 /* ---- Works cards ---- */

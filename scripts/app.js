@@ -7,7 +7,7 @@ import { buildDetailPreview } from './previews/index.js';
 import { canvasTheme, canvasRgba, createThemeController } from './core/theme.js';
 import { advanceTimelineRuntime, appState } from './core/state.js';
 import { createGeometryCache } from './timeline/geometry.js';
-import { clamp, resolveTimelinePhase, TIMELINE_RANGES, TIMELINE_WINDOWS } from './timeline/math.js';
+import { canOpenWorkAtProgress, clamp, resolveTimelinePhase, TIMELINE_RANGES } from './timeline/math.js';
 import { createScheduler } from './core/scheduler.js';
 import { createCanvasSurface, createCanvasScene, createCanvasTools, createNearestBudAccessor } from './timeline/canvas.js';
 import { createTimelineRenderer } from './timeline/renderer.js';
@@ -65,6 +65,10 @@ function progress() {
   return clamp((window.scrollY - geometry.getHeroTop()) / geometry.getScrollRange());
 }
 
+function canOpenWork() {
+  return !appState.detail.detailMode && canOpenWorkAtProgress(appState.timeline.progress);
+}
+
 function scrollToTimelineProgress(targetProgress) {
   const target = clamp(targetProgress);
   const targetY = geometry.getHeroTop() + geometry.getScrollRange() * target;
@@ -91,7 +95,7 @@ const detail = createDetailController({
   items,
   cards,
   dom,
-  getProgress: progress,
+  canOpenWork,
   getViewport: geometry.getViewport,
   buildDetailPreview: item => buildDetailPreview({ item, preview: dom.workDetailPreview }),
   cleanupDetailAudio,
@@ -148,9 +152,7 @@ scheduler = createScheduler(
       progress: siteProgress,
       phase: resolveTimelinePhase(siteProgress, TIMELINE_RANGES),
       mouse,
-      canOpenWork: !appState.detail.detailMode
-        && siteProgress >= TIMELINE_WINDOWS.workOpenStart
-        && siteProgress <= TIMELINE_WINDOWS.workOpenEnd
+      canOpenWork: !appState.detail.detailMode && canOpenWorkAtProgress(siteProgress)
     });
   }
 );

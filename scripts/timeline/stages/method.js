@@ -131,4 +131,23 @@ export function renderMethod(frame) {
   return false;
 }
 
+export function resetMethod({ dom }) {
+  dom.methodLayer.style.opacity = 0;
+  dom.methodHeaderEls.forEach(element => {
+    element.style.opacity = 0;
+    element.style.transform = 'translateY(8px)';
+  });
+  dom.methodSources.forEach(source => {
+    source.style.opacity = 0;
+  });
+  [dom.thinkNode, dom.buildNode, dom.connectNode].forEach(node => {
+    node.style.opacity = 0;
+    node.style.filter = 'blur(5px)';
+  });
+  dom.methodCenter.style.opacity = 0;
+  [dom.methodLine1, dom.methodLine2, dom.methodLine3].forEach(line => {
+    line.style.opacity = 0;
+  });
+}
+
 export { getMethodGeometry, setLine };
