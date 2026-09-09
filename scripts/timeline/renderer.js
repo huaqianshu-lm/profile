@@ -1,5 +1,5 @@
 import { renderSeedGrowCanvasBackdrop, renderSeedGrowHud, renderSeedGrowStage, resetSeedGrowStage } from './stages/seed-grow.js';
-import { renderWorks, resetWorks } from './stages/works.js';
+import { renderWorks, resetWorks } from './stages/works.js?v=20260909-works-card-animation';
 import { renderMethod, resetMethod } from './stages/method.js';
 import { renderExploring, resetExploring } from './stages/exploring.js';
 import { renderEnding, resetEnding } from './stages/ending.js';

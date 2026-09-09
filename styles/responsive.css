@@ -239,37 +239,6 @@ html[data-theme="light"] .detail-radar-source{
   box-shadow:none;
 }
 
-/* LIFE OS */
-html[data-theme="light"] .work-detail-card:has(.detail-lifeos-stage){
-  border-color:#e3e6e8;
-}
-html[data-theme="light"] .work-detail-preview:has(.detail-lifeos-stage){
-  border-color:#e7eaec;
-}
-html[data-theme="light"] .work-detail-preview:has(.detail-lifeos-stage)::after{
-  box-shadow:none;
-}
-html[data-theme="light"] .detail-lifeos-stage{
-  --los-bg:#ffffff;
-  --los-grid:rgba(31,38,43,.014);
-  --los-surface:#ffffff;
-  --los-surface-2:#ffffff;
-  --los-line:#e2e6e8;
-  --los-line-strong:#d1d9dc;
-  background:#ffffff;
-}
-html[data-theme="light"] .detail-lifeos-card,
-html[data-theme="light"] .detail-lifeos-step:not(.decision),
-html[data-theme="light"] .detail-lifeos-gate{
-  background:#ffffff;
-  box-shadow:none;
-}
-html[data-theme="light"] .detail-lifeos-journey{
-  background:#ffffff;
-}
-
-
-
 /* =========================================================
    LIGHT ECHOLINE — match Video detail frame
    Remove the dark stage frame; color-only change.
@@ -1608,306 +1577,300 @@ html[data-theme="light"] .works-card .echo-ring{
     white-space:normal;
   }
 }
+/* Signal filter: preserve the aperture and consequence on a narrow screen. */
+@media(max-width:759px){
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .work-detail-body{grid-template-rows:minmax(735px,84vh) auto}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .work-detail-preview{min-height:735px}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-stage{padding:12px}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-app{height:100%;min-height:0;gap:12px}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-filter-head small,
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-filter-state,
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-filter-steps,
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-fragments > p,
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-filter-result > p,
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-signal-status,
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-signal-source span,
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-filter-foot{font-size:7px}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-filter-head h3{font-size:28px}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-filter-state{gap:5px;font-size:6px}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-filter-field{min-height:610px}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-filter-field::before,
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-filter-routes{display:none}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-filter-steps{top:4%;gap:5px;font-size:6px}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-filter-steps i{width:9px}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-fragments{top:13%;bottom:auto;left:7%;width:83%;height:155px}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-fragments > p{font-size:7px}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-fragments .is-source{padding:4px 6px;font-size:8px}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-fragments .one{top:19%;left:0}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-fragments .two{top:38%;left:18%}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-fragments .three{top:57%;left:4%}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-fragments .four{top:75%;left:27%}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-fragments .five{top:93%;left:10%}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-fragments .is-rejection{font-size:6px}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-fragments .duplicate{top:60%;left:63%}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-fragments .weak{top:96%;left:58%}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-filter-core{top:52%;width:178px}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-filter-core-window b{font-size:18px}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-filter-result{top:74%;right:auto;left:10%;width:80%;transform:none}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-filter-result h4{margin-top:7px;font-size:20px;line-height:1.32}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-signal-status{margin-top:11px}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-signal-source{margin-top:12px;padding-top:8px}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-signal-source b{font-size:8px}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-filter-foot{gap:5px}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-filter-foot span{padding:4px 5px}
+  .work-detail-card:has(.detail-radar-app.is-signal-filter) .detail-radar-filter-foot span:first-child{width:100%}
+}
+
 /* END MOBILE DETAIL 04 — AI Radar */
+
+/* AI Radar reference composition — desktop is left → center → right; phone is top → center → bottom. */
+html[data-theme="light"] .detail-radar-stage{
+  --radar-bg:#f4f1ea;
+  --radar-line:rgba(63,119,104,.16);
+  --radar-line-strong:rgba(63,119,104,.26);
+  --radar-muted:#8d9691;
+  --radar-faint:#adb5b1;
+  --radar-accent:#3f7768;
+  --radar-accent-2:#4f8190;
+  background:var(--radar-bg);
+}
+html[data-theme="light"] .detail-radar-stage::before{
+  background-image:linear-gradient(rgba(63,119,104,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(63,119,104,.028) 1px,transparent 1px);
+  background-size:42px 42px;
+}
+@media(max-width:759px){
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .work-detail-body{grid-template-rows:minmax(660px,82vh) auto;gap:18px}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .work-detail-preview{grid-row:1;min-height:660px;overflow:hidden}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .work-detail-copy{grid-row:2}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-stage{padding:0}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-filter-head{left:7%;right:7%;top:5.5%}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-brand b{font-size:10px}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-brand small{margin-top:5px;font-size:5.5px;letter-spacing:.08em}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-filter-mini{display:none}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-filter-label{top:18%;font-size:6px}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-filter-label-incoming{left:7%}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-filter-label-kept{right:7%}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-filter-zone{width:176px}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-filter-caption{top:73%;font-size:6px}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-flow-item{left:5%;gap:7px;max-width:48%;font-size:8px}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-flow-item i{height:22px}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-flow-item em{display:none}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-kept-signal{right:6%;width:43%;padding-left:5%;gap:7px}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-kept-signal > i{height:28px}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-kept-signal small{margin-bottom:5px;font-size:6px}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-kept-signal b{font-size:9px;line-height:1.25}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-filter-foot{left:7%;right:7%;bottom:4%;display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:7px 10px;font-size:6px;line-height:1.25}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-filter-foot span{white-space:normal}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-filter-foot span:nth-child(3){grid-column:1/-1}
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-filter-foot span:nth-child(4),
+  .work-detail-card:has(.detail-radar-app.is-reference-filter) .detail-radar-filter-foot span:nth-child(5){justify-self:start}
+}
 
 
 /* =========================================================
-   MOBILE DETAIL 05 — Life OS
-   Dedicated phone execution chain. Preserve the same Goal →
-   Project → Decision → Action → Execute → Review logic, but
-   convert the desktop 3×2 map into a vertical mobile system.
+   MOBILE DETAIL 05 — Life OS uses a real vertical flow
    ========================================================= */
-@media(max-width:759px){
-  .work-detail-card:has(.detail-lifeos-stage) .work-detail-body{
-    grid-template-rows:1000px auto;
-    gap:18px;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .work-detail-preview{
-    grid-row:1;
-    min-height:1000px;
-    overflow:hidden;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .work-detail-copy{
-    grid-row:2;
-  }
-
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-stage{
-    padding:12px;
-    overflow:hidden;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-app{
-    height:auto;
-    min-height:100%;
-    grid-template-rows:auto auto auto;
-    gap:8px;
-  }
-
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-head{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:8px;
-    padding:11px 12px 10px;
-    border-radius:11px;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-eyebrow,
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step small,
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-cycle small,
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-principles small{
-    font-size:5.7px;
-    letter-spacing:.14em;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-head h3{
-    margin-top:5px;
-    font-size:26px;
-    line-height:1;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-head p{
-    margin-top:4px;
-    font-size:7.3px;
-    line-height:1.42;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-cycle{
-    min-width:0;
-    width:100%;
-    display:grid;
-    grid-template-columns:auto auto 1fr;
-    align-items:center;
-    gap:7px;
-    padding:7px 8px;
-    border-radius:8px;
-    text-align:left;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-cycle b{
-    margin-top:0;
-    font-size:10px;
-    line-height:1;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-cycle span{
-    margin-top:0;
-    font-size:5.8px;
-    text-align:right;
-  }
-
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-journey{
-    position:relative;
-    display:grid;
-    grid-template-columns:1fr;
-    grid-template-rows:none;
-    gap:7px;
+@media(max-width:860px){
+  #workDetailCard[data-project="lifeos"] .work-detail-body{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
     min-height:0;
-    padding:10px 9px 10px 25px;
-    border-radius:11px;
+    gap:18px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  #workDetailCard[data-project="lifeos"] .work-detail-preview{
+    flex:0 0 auto;
+    width:100%;
+    height:auto;
+    min-height:0;
+    overflow:visible;
+    border-radius:0;
+  }
+
+  #workDetailCard[data-project="lifeos"] .work-detail-copy{
+    flex:0 0 auto;
+    align-self:stretch;
+    width:100%;
+  }
+
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-stage{
+    position:relative;
+    inset:auto;
+    width:100%;
+    height:auto;
+    min-height:0;
+    padding:0;
     overflow:visible;
   }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-flowlines{
-    display:none;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-journey::before{
-    content:"";
-    position:absolute;
-    left:13px;
-    top:25px;
-    bottom:25px;
-    width:1px;
-    background:linear-gradient(
-      to bottom,
-      var(--los-goal),
-      var(--los-project) 22%,
-      var(--los-task) 56%,
-      var(--los-review) 86%,
-      color-mix(in srgb,var(--los-review) 28%,transparent)
-    );
-    opacity:.34;
+
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-preview{
+    display:block;
+    width:100%;
+    height:auto;
+    min-height:0;
+    max-height:none;
+    aspect-ratio:auto;
+    overflow:visible;
+    border-radius:0;
   }
 
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.goal,
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.project,
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.decision,
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.action,
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.execute,
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.review{
-    grid-column:1;
-    grid-row:auto;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step{
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-masthead{
     position:relative;
+    inset:auto;
+    display:block;
+    padding:26px 18px 18px;
+  }
+
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-brand{
     min-width:0;
-    padding:8px 9px 7px;
-    border-radius:9px;
-    box-shadow:none;
+    padding-right:48px;
   }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step::before{
-    content:"";
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-brand small{font-size:9px}
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-brand h1{font-size:28px}
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-brand p{
+    max-width:100%;
+    font-size:12px;
+    line-height:1.6;
+  }
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-status{
     position:absolute;
-    left:-17px;
-    top:17px;
-    width:6px;
-    height:6px;
-    border-radius:50%;
-    background:var(--step);
-    box-shadow:0 0 0 3px color-mix(in srgb,var(--step) 10%,transparent);
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.decision{
-    padding:0;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.decision::before{
-    background:var(--los-task);
+    top:26px;
+    right:18px;
+    padding:8px 9px;
+    font-size:8px;
   }
 
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-stepbar{
-    margin-bottom:5px;
-    gap:6px;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-stepbar small{
-    font-size:5.7px;
-    line-height:1.1;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-stepbar em{
-    padding:2.5px 5px;
-    font-size:5.5px;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step strong{
-    font-size:8.7px;
-    line-height:1.3;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step p{
-    margin-top:4px;
-    font-size:6.2px;
-    line-height:1.38;
-    display:-webkit-box;
-    -webkit-box-orient:vertical;
-    -webkit-line-clamp:2;
-    overflow:hidden;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-props{
-    gap:4px;
-    margin-top:5px;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-props span{
-    padding:2.5px 4px;
-    font-size:5.2px;
-    line-height:1.15;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-scope{
-    gap:5px;
-    margin-top:5px;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-scope span{
-    font-size:5px;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.goal .detail-lifeos-scope i,
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.project .detail-lifeos-scope i,
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-step.action .detail-lifeos-scope i{
-    width:min(74px,38vw);
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-flow{
+    position:relative;
+    inset:auto;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    align-items:stretch;
+    flex:none;
+    gap:24px 10px;
+    width:100%;
+    min-width:0;
+    padding:10px 18px 22px;
   }
 
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-gate{
-    padding:9px 9px 8px;
-    border-radius:9px;
-    box-shadow:none;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-gate::before{
-    display:none;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-decision-title{
-    min-height:24px;
-    font-size:8.5px;
-    line-height:1.25;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-choice{
-    gap:5px;
-    margin-top:6px;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-choice span{
-    padding:5px 4px;
-    font-size:5.5px;
-    line-height:1.25;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-choice span:first-child::after{
-    display:none;
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-connectors{display:none}
+
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-node,
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-capture,
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-decision,
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-lane,
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-merge{
+    position:relative;
+    inset:auto;
+    width:100%;
+    height:auto;
+    min-width:0;
+    flex:none;
+    transform:none;
   }
 
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-action-focus{
-    margin-top:4px;
-    padding:6px 7px;
-    border-radius:7px;
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-flow > .detail-lifeos-demo-capture{
+    order:1;
+    grid-column:1/-1;
   }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-action-focus b{
-    font-size:9px;
-    line-height:1.25;
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-flow > .detail-lifeos-demo-decision{
+    order:2;
+    grid-column:1/-1;
+    margin:0;
   }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-action-focus span{
-    margin-top:3px;
-    font-size:5.1px;
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-flow > .detail-lifeos-demo-lane-direct{
+    order:3;
+    grid-column:1;
   }
-
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-today{
-    gap:4px;
-    margin-top:5px;
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-flow > .detail-lifeos-demo-lane-project{
+    order:4;
+    grid-column:2;
   }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-check{
-    grid-template-columns:9px minmax(0,1fr) auto;
-    gap:5px;
-    padding:4px 5px;
-    border-radius:6px;
-    font-size:5.7px;
-    line-height:1.2;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-check i{
-    width:8px;
-    height:8px;
-    border-radius:2px;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-check.is-current i::after{
-    left:0;
-    top:-3px;
-    font-size:7px;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-check b{
-    font-size:5.1px;
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-flow > .detail-lifeos-demo-merge{
+    order:5;
+    grid-column:1/-1;
   }
 
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-review-metrics{
-    gap:4px;
-    margin-top:5px;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-review-metrics div{
-    padding:4px 3px;
-    border-radius:6px;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-review-metrics b{
-    font-size:8.5px;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-review-metrics span{
-    margin-top:2px;
-    font-size:5.1px;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-review-insight{
-    margin-top:5px;
-    padding:5px 6px;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-review-insight small{
-    font-size:4.8px;
-  }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-review-insight b{
-    margin-top:2px;
-    font-size:5.8px;
-    line-height:1.35;
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-flow > .detail-lifeos-demo-capture::after,
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-decision::after,
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-lane::after{
+    content:"↓";
+    position:absolute;
+    z-index:3;
+    left:50%;
+    bottom:-17px;
+    color:#9ca29e;
+    font:15px/1 var(--mono);
+    transform:translateX(-50%);
   }
 
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-principles{
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-decision{
+    min-height:132px;
+    padding:28px 54px;
+  }
+
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-decision::before{
+    width:112px;
+    height:112px;
+    transform:translate(-50%,-50%) rotate(45deg);
+  }
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-decision strong{font-size:13px}
+
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-lane{
+    padding:28px 14px 16px;
+    border-radius:18px;
+  }
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-lane-title{left:14px}
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-lane-content,
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-lane-project .detail-lifeos-demo-lane-content{
     display:grid;
     grid-template-columns:1fr;
-    gap:4px;
-    padding:7px 2px 0;
+    gap:10px;
+    height:auto;
   }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-principles b{
-    font-size:6.3px;
-    line-height:1.35;
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-lane .detail-lifeos-demo-node{
+    min-height:0;
+    gap:8px;
+    padding:10px 8px;
+    align-items:flex-start;
   }
-  .work-detail-card:has(.detail-lifeos-stage) .detail-lifeos-principles span{
-    font-size:5.2px;
-    line-height:1.25;
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-lane .detail-lifeos-demo-node strong{font-size:12px;line-height:1.3}
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-lane .detail-lifeos-demo-node span:last-child{font-size:8px;line-height:1.35}
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-arrow{
+    transform:rotate(90deg);
+    animation:none;
+  }
+
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-merge{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+    margin:0;
+  }
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-merge .detail-lifeos-demo-arrow{
+    order:2;
+    transform:rotate(90deg);
+  }
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-merge .detail-lifeos-demo-node:last-child{order:3}
+
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-footer{
+    position:relative;
+    inset:auto;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:8px;
+    margin:0 18px;
+    padding:14px 0 24px;
+    font-size:7px;
+    line-height:1.4;
+  }
+  #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-footer span{
+    min-width:0;
+    white-space:normal;
   }
 }
 /* END MOBILE DETAIL 05 — Life OS */
@@ -2370,6 +2333,45 @@ html[data-theme="light"] .works-card .echo-ring{
 }
 
 /* =========================================================
+   TIMELINE NAVIGATION — hover highlight
+   Shared tokens keep the interaction legible in both themes.
+   ========================================================= */
+.nav-right .nav-jump{
+  position:relative;
+  padding:10px;
+  margin:0 -10px;
+  color:var(--site-faint);
+  transition:color .2s ease;
+}
+.nav-right .nav-jump::after{
+  content:"";
+  position:absolute;
+  left:10px;
+  right:10px;
+  bottom:4px;
+  height:1px;
+  background:var(--site-point);
+  transform:scaleX(0);
+  transform-origin:center;
+  transition:transform .2s ease;
+}
+.nav-right .nav-jump:hover,
+.nav-right .nav-jump:focus-visible{
+  color:var(--site-ink);
+}
+.nav-right .nav-jump:hover::after,
+.nav-right .nav-jump:focus-visible::after{
+  transform:scaleX(1);
+}
+
+@media(max-width:860px){
+  .mobile-nav-link:hover{
+    color:var(--site-ink);
+    background:var(--site-surface-soft);
+  }
+}
+
+/* =========================================================
    PC SCENE COPY — approved scene-integrated layout
    Desktop only. Mobile keeps the existing heading composition.
    Works / Method / Exploring share the same hierarchy:
@@ -2544,4 +2546,465 @@ html[data-theme="light"] .works-card .echo-ring{
   animation-play-state:paused !important;
 }
 
+/* AI Radar reference demo — narrow screens stack the reference composition
+   inside a taller 4:3 preview so each signal group has its own space. Use the
+   project data attribute as a real-device fallback for browsers without :has. */
+@media(max-width:860px){
+  #workDetailCard[data-project="news"] .work-detail-body{grid-template-rows:calc(75vw - 54px) auto;gap:18px;overflow-x:hidden;overflow-y:auto}
+  #workDetailCard[data-project="news"] .work-detail-preview{grid-row:1;min-height:0;width:100%;height:calc(75vw - 54px);aspect-ratio:auto;max-width:100%;contain:paint}
+  #workDetailCard[data-project="news"] .detail-radar-app.is-reference-filter{height:100%;min-height:0;display:block}
+  #workDetailCard[data-project="news"] .detail-radar-reference-preview{container-type:inline-size}
+  .detail-radar-app.is-reference-filter .trail.mobile-trail{display:block}
+  .detail-radar-app.is-reference-filter .trail.desktop-trail{display:none}
+  .detail-radar-app.is-reference-filter .head{left:5%;right:5%;top:5%}
+  .detail-radar-app.is-reference-filter .brand{font-size:clamp(6px,2.7cqw,10px);letter-spacing:.13em}
+  .detail-radar-app.is-reference-filter .mini{font-size:clamp(4px,1.55cqw,7px);letter-spacing:.06em}
+  .detail-radar-app.is-reference-filter .section-label{font-size:clamp(4.2px,1.95cqw,7px);letter-spacing:.10em}
+  .detail-radar-app.is-reference-filter .incoming-label{left:5%;top:18%}
+  .detail-radar-app.is-reference-filter .incoming-label b{margin-left:3px}
+  .detail-radar-app.is-reference-filter .signals-label{left:50%;right:auto;top:72%;transform:translateX(-50%);white-space:nowrap}
+  .detail-radar-app.is-reference-filter .flow-layer{-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 34%,rgba(0,0,0,.88) 42%,rgba(0,0,0,.48) 49%,transparent 56%);mask-image:linear-gradient(180deg,#000 0%,#000 34%,rgba(0,0,0,.88) 42%,rgba(0,0,0,.48) 49%,transparent 56%)}
+  .detail-radar-app.is-reference-filter .flow-item{max-width:29%;white-space:normal;line-height:1.1}
+  .detail-radar-app.is-reference-filter .filter-zone{top:44%;width:min(250px,24cqw);height:min(250px,24cqw)}
+  .detail-radar-app.is-reference-filter .filter-zone::before{inset:19.56%}
+  .detail-radar-app.is-reference-filter .filter-zone::after{inset:33.91%}
+  .detail-radar-app.is-reference-filter .scan{width:45.65%;height:45.65%}
+  .detail-radar-app.is-reference-filter .filter-core{width:80%}
+  .detail-radar-app.is-reference-filter .filter-core b{display:none;margin:3px 0 2px;font-size:clamp(9px,6.2cqw,22px)}
+  .detail-radar-app.is-reference-filter .filter-core em{font-size:clamp(4px,1.75cqw,7px);letter-spacing:.08em}
+  .detail-radar-app.is-reference-filter .process-chip{width:min(155px,31cqw);padding:4px 6px;font-size:clamp(4.5px,2.2cqw,8px);letter-spacing:.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .detail-radar-app.is-reference-filter .process-chip{top:38%}
+  .detail-radar-app.is-reference-filter .process-chip.show{transform:translate(-50%,-50%)}
+  .detail-radar-app.is-reference-filter .filter-caption{display:none}
+  .detail-radar-app.is-reference-filter .flow-item{gap:clamp(3px,1.25cqw,7px);font-size:clamp(5px,2.7cqw,9px)}
+  .detail-radar-app.is-reference-filter .flow-item .tick{height:clamp(14px,7.65cqw,26px)}
+  .detail-radar-app.is-reference-filter .flow-item .reason{display:none}
+  .detail-radar-app.is-reference-filter .signal-item{right:auto;width:28%;padding-left:0;gap:clamp(3px,1.25cqw,7px)}
+  .detail-radar-app.is-reference-filter .signal-item .tick{height:clamp(15px,7.5cqw,25px)}
+  .detail-radar-app.is-reference-filter .signal-item .meta{margin-bottom:clamp(2px,1.05cqw,4px);font-size:clamp(4px,1.75cqw,7px);letter-spacing:.045em}
+  .detail-radar-app.is-reference-filter .signal-item .title{font-size:clamp(5.5px,2.7cqw,9px);line-height:1.15;letter-spacing:-.02em;overflow-wrap:anywhere}
+  .detail-radar-app.is-reference-filter .s1{left:5%;top:78%}
+  .detail-radar-app.is-reference-filter .s2{left:36%;top:78%}
+  .detail-radar-app.is-reference-filter .s3{left:67%;top:78%}
+  .detail-radar-app.is-reference-filter .footer{left:5%;right:5%;bottom:4%;padding-top:clamp(5px,2.1cqw,8px);font-size:clamp(4px,1.55cqw,6px);letter-spacing:.025em;gap:4px}
+  .detail-radar-app.is-reference-filter .footer>span{min-width:0;line-height:1.2;white-space:normal}
+  .detail-radar-app.is-reference-filter .footer>span:first-child{max-width:48%}
+  .detail-radar-app.is-reference-filter .footer>.summary{max-width:48%;text-align:right}
+}
+
+/* Video detail preview — give real mobile browsers a definite surface to paint. */
+@media(max-width:860px){
+  #workDetailCard[data-project="video"] .work-detail-body{
+    grid-template-rows:210px auto;
+    gap:18px;
+    overflow-x:hidden;
+    overflow-y:auto;
+  }
+  #workDetailCard[data-project="video"] .work-detail-preview{
+    grid-row:1;
+    width:100%;
+    height:210px;
+    min-height:210px;
+    overflow:hidden;
+  }
+  #workDetailCard[data-project="video"] .detail-video-only{
+    position:relative;
+    inset:auto;
+    width:100%;
+    height:100%;
+    min-width:0;
+    min-height:0;
+    max-width:100%;
+    max-height:100%;
+  }
+}
+
 /* END MOBILE NAVIGATION */
+
+/* ECHOLINE V6 — the reference preview keeps its 16:9 composition on phones. */
+@media(max-width:860px){
+  .work-detail-card[data-project="echo"] .work-detail-body{
+    grid-template-rows:210px auto;
+    gap:18px;
+    overflow-x:hidden;
+    overflow-y:auto;
+  }
+  .work-detail-card[data-project="echo"] .work-detail-preview{
+    grid-row:1;
+    width:100%;
+    height:210px;
+    min-height:210px;
+    overflow:hidden;
+  }
+}
+
+@media(max-width:759px){
+  .work-detail-card[data-project="echo"] .work-detail-body{
+    grid-template-rows:clamp(180px,56.25vw,220px) auto;
+  }
+  .work-detail-card[data-project="echo"] .work-detail-preview{
+    height:auto;
+    min-height:0;
+  }
+  .work-detail-card[data-project="echo"] .work-detail-copy{
+    grid-row:2;
+  }
+}
+
+/* =========================================================
+   DARK DETAIL PREVIEWS — Life OS / echoline / AI Radar
+   Theme-only overrides for the current preview demos. Keep
+   the light compositions, geometry and motion unchanged.
+   ========================================================= */
+
+/* Life OS */
+html[data-theme="dark"] #workDetailCard[data-project="lifeos"] .work-detail-preview{
+  background:#0a0e10;
+}
+html[data-theme="dark"] .detail-lifeos-demo-stage{
+  --page:#080b0d;
+  --paper:#11181b;
+  --surface:rgba(25,34,38,.90);
+  --ink:#e8efeb;
+  --muted:#8d9b96;
+  --line:rgba(185,207,199,.22);
+  --green:#79b798;
+  --orange:#d39a63;
+  --blue:#82afbf;
+  --purple:#b092ae;
+  background:var(--page);
+}
+html[data-theme="dark"] .detail-lifeos-demo-preview{
+  border-color:rgba(199,218,210,.18);
+  background:
+    linear-gradient(rgba(132,160,151,.055) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(132,160,151,.055) 1px,transparent 1px),
+    radial-gradient(circle at 14% 12%,rgba(79,141,110,.14),transparent 24%),
+    radial-gradient(circle at 86% 80%,rgba(191,123,66,.11),transparent 25%),
+    var(--paper);
+  box-shadow:0 30px 90px rgba(0,0,0,.44);
+}
+html[data-theme="dark"] .detail-lifeos-demo-preview::after{
+  box-shadow:inset 0 0 70px rgba(0,0,0,.18);
+}
+html[data-theme="dark"] .detail-lifeos-demo-status{
+  border-color:var(--line);
+  background:rgba(22,31,35,.74);
+}
+html[data-theme="dark"] .detail-lifeos-demo-status i{
+  box-shadow:0 0 0 5px rgba(121,183,152,.14);
+}
+html[data-theme="dark"] .detail-lifeos-demo-connectors > path{
+  stroke:#82918c;
+}
+html[data-theme="dark"] .detail-lifeos-demo-connectors #arrow-gray path{fill:#82918c}
+html[data-theme="dark"] .detail-lifeos-demo-connectors #arrow-green path{fill:var(--green)}
+html[data-theme="dark"] .detail-lifeos-demo-connectors #arrow-orange path{fill:var(--orange)}
+html[data-theme="dark"] .detail-lifeos-demo-connectors #arrow-purple path{fill:var(--purple)}
+html[data-theme="dark"] .detail-lifeos-demo-node{
+  box-shadow:0 12px 30px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.025);
+}
+html[data-theme="dark"] .detail-lifeos-demo-decision::before{
+  border-color:#84918d;
+  background:rgba(17,25,28,.92);
+  box-shadow:0 9px 24px rgba(0,0,0,.28);
+}
+html[data-theme="dark"] .detail-lifeos-demo-lane{
+  background:color-mix(in srgb,currentColor 8%,rgba(15,22,25,.92));
+}
+html[data-theme="dark"] .detail-lifeos-demo-lane .detail-lifeos-demo-node{
+  background:rgba(24,33,37,.94);
+}
+html[data-theme="dark"] #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-flow > .detail-lifeos-demo-capture::after,
+html[data-theme="dark"] #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-decision::after,
+html[data-theme="dark"] #workDetailCard[data-project="lifeos"] .detail-lifeos-demo-lane::after{
+  color:#82918c;
+}
+
+/* echoline */
+html[data-theme="dark"] .detail-echo-demo{
+  --echo-bg:#0d151a;
+  --echo-text:#e5edf1;
+  --echo-muted:#8999a2;
+  --echo-faint:#64757e;
+  --echo-line:rgba(181,204,207,.18);
+  --echo-accent:#78b29e;
+  --echo-accent-2:#78aebb;
+  border-color:rgba(181,204,207,.18);
+  background:
+    linear-gradient(rgba(121,164,158,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(121,164,158,.045) 1px,transparent 1px),
+    radial-gradient(circle at 18% 18%,rgba(120,178,158,.09),transparent 22%),
+    radial-gradient(circle at 82% 72%,rgba(120,174,187,.08),transparent 24%),
+    var(--echo-bg);
+  color-scheme:dark;
+}
+html[data-theme="dark"] .detail-echo-demo-loop-badge{
+  background:rgba(255,255,255,.055);
+}
+html[data-theme="dark"] .detail-echo-demo-subtitle.is-hidden{
+  text-shadow:0 0 9px rgba(229,237,241,.16);
+}
+html[data-theme="dark"] .detail-echo-demo-subtitle .soft{
+  color:#91a29f;
+}
+html[data-theme="dark"] .detail-echo-demo-wave .bar{
+  background:#71837f;
+}
+html[data-theme="dark"] .detail-echo-demo-track{
+  background:#56676a;
+}
+html[data-theme="dark"] .detail-echo-demo-range{
+  background:rgba(120,178,158,.22);
+}
+html[data-theme="dark"] .detail-echo-demo-range::before,
+html[data-theme="dark"] .detail-echo-demo-range::after{
+  background:rgba(120,178,158,.55);
+}
+html[data-theme="dark"] .detail-echo-demo-input-line{
+  border-bottom-color:rgba(181,204,207,.22);
+}
+html[data-theme="dark"] .detail-echo-demo-typed .wrong{
+  color:#93a39f;
+}
+
+/* AI Radar — current reference composition uses generic child names,
+   so these selectors intentionally stay inside the reference preview. */
+html[data-theme="dark"] .detail-radar-stage{
+  --radar-bg:#0d1513;
+  --radar-line:rgba(137,172,162,.16);
+  --radar-line-strong:rgba(137,172,162,.28);
+  --radar-text:#dce8e4;
+  --radar-muted:#83978f;
+  --radar-faint:#61746d;
+  --radar-accent:#72a894;
+  --radar-accent-2:#70a4b2;
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .detail-radar-reference-preview{
+  border-color:rgba(137,172,162,.18);
+  background:
+    linear-gradient(rgba(130,168,156,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(130,168,156,.035) 1px,transparent 1px),
+    #0f1716;
+  color:var(--radar-text);
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .brand span,
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .incoming-label b,
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .signals-label,
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .filter-core em,
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .filter-caption b,
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .signal-item .meta,
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .footer .summary{
+  color:var(--radar-accent);
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .mini,
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .section-label,
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .filter-caption,
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .footer{
+  color:var(--radar-muted);
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .trail{
+  stroke:rgba(137,172,162,.24);
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .flow-item{
+  color:#9aa9a4;
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .flow-item .tick{
+  background:rgba(137,172,162,.34);
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .flow-item strong{
+  color:#c3d3cc;
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .flow-item.dead,
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .flow-item.dead strong,
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .flow-item .reason{
+  color:#71817a;
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .filter-zone{
+  border-color:rgba(114,168,148,.32);
+  background:
+    radial-gradient(circle,transparent 0 32%,rgba(114,168,148,.12) 32.5% 33%,transparent 33.5% 59%,rgba(114,168,148,.08) 59.5% 60%,transparent 60.5%),
+    rgba(15,25,23,.66);
+  box-shadow:0 0 34px rgba(80,150,130,.10);
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .filter-zone::before{
+  border-color:rgba(114,168,148,.38);
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .filter-zone::after{
+  border-color:var(--radar-accent-2);
+  background:rgba(16,26,28,.78);
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .scan::before{
+  background:conic-gradient(from 265deg at 0 0,rgba(114,168,148,.24),rgba(114,168,148,0) 34deg,transparent 35deg);
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .process-chip{
+  border-color:rgba(114,168,148,.24);
+  background:rgba(17,26,24,.92);
+  color:#9aacaa;
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .process-chip.pass{
+  color:var(--radar-accent);
+  border-color:rgba(114,168,148,.42);
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .process-chip.reject{
+  color:#7d8a84;
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .signal-item .tick{
+  background:rgba(114,168,148,.42);
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .signal-item .title{
+  color:#dce8e4;
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .signal-item.hit .tick{
+  background:var(--radar-accent);
+  box-shadow:0 0 10px rgba(114,168,148,.28);
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .signal-particle{
+  background:var(--radar-accent);
+  box-shadow:0 0 0 5px rgba(114,168,148,.12);
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .reject-ring{
+  border-color:rgba(160,177,169,.55);
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .footer{
+  border-top-color:rgba(137,172,162,.18);
+}
+html[data-theme="dark"] .detail-radar-app.is-reference-filter .footer b{
+  color:var(--radar-text);
+}
+
+/* LIGHT ECHOLINE — align the current v6 demo with Memora's neutral surface. */
+html[data-theme="light"] .work-detail-card[data-project="echo"]{
+  border-color:#e3e6ea;
+  background:#ffffff;
+  box-shadow:0 26px 76px rgba(23,29,32,.045),inset 0 1px 0 #ffffff;
+}
+html[data-theme="light"] #workDetailCard[data-project="echo"] .work-detail-preview{
+  border-color:#e7e9ed;
+  background:#ffffff;
+  box-shadow:none;
+}
+html[data-theme="light"] #workDetailCard[data-project="echo"] .work-detail-preview::after{
+  box-shadow:none;
+}
+html[data-theme="light"] .detail-echo-demo{
+  --echo-bg:#ffffff;
+  --echo-text:#202428;
+  --echo-muted:#747d82;
+  --echo-faint:#9ca5a9;
+  --echo-line:#e2e5eb;
+  --echo-accent:#3f7768;
+  --echo-accent-2:#4f8190;
+  border-color:#e2e5eb;
+  background:
+    linear-gradient(rgba(55,65,82,.014) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(55,65,82,.014) 1px,transparent 1px),
+    radial-gradient(circle at 18% 10%,rgba(63,119,104,.025),transparent 22%),
+    var(--echo-bg);
+  box-shadow:none;
+  color-scheme:light;
+}
+html[data-theme="light"] .detail-echo-demo-loop-badge{
+  background:#ffffff;
+  border-color:#e3e6eb;
+}
+html[data-theme="light"] .detail-echo-demo-subtitle.is-hidden{
+  text-shadow:0 0 9px rgba(32,38,36,.08);
+}
+html[data-theme="light"] .detail-echo-demo-input-line{
+  border-bottom-color:#e2e5eb;
+}
+
+/* =========================================================
+   MOBILE DETAIL 02 — compact Unframed spacing
+   Keep the original element scale and shorten only the
+   vertical whitespace inside the phone preview.
+   ========================================================= */
+@media(max-width:759px){
+  .work-detail-card:has(.detail-music-stage) .work-detail-body{
+    grid-template-rows:520px auto;
+    gap:14px;
+  }
+  .work-detail-card:has(.detail-music-stage) .work-detail-preview{
+    min-height:520px;
+  }
+
+  .work-detail-card:has(.detail-music-stage) .detail-music-track-label{
+    top:5.5%;
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-track-label small{
+    font-size:6.5px;
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-track-label strong{
+    margin-top:6px;
+    font-size:12px;
+  }
+
+  .work-detail-card:has(.detail-music-stage) .detail-music-orbit{
+    top:42%;
+    width:min(52vw,210px);
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-orbit::before{
+    transform-origin:0 calc(min(52vw,210px) / 2 + 4px);
+  }
+
+  .work-detail-card:has(.detail-music-stage) .detail-music-lyrics{
+    left:7%;
+    right:7%;
+    top:42%;
+    height:158px;
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-lyrics::before{
+    font-size:5.5px;
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-lyric{
+    margin:3px 0;
+    font-size:7.5px;
+    line-height:1.45;
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-lyric.is-current{
+    margin:6px 0;
+    font-size:12.5px;
+    line-height:1.38;
+  }
+
+  .work-detail-card:has(.detail-music-stage) .detail-music-bottom{
+    left:7%;
+    right:7%;
+    bottom:5%;
+    grid-template-rows:92px 34px;
+    row-gap:11px;
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-bottom .detail-music-wave{
+    height:92px;
+    gap:1.15px;
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-wave i{
+    width:1.55px;
+    min-width:1.55px;
+    height:calc(6px + var(--amp) * 92px);
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-wave::after{
+    bottom:-7px;
+    height:26px;
+    filter:blur(17px);
+  }
+
+  .work-detail-card:has(.detail-music-stage) .detail-music-bottom .detail-music-controls{
+    min-height:34px;
+    grid-template-columns:56px minmax(0,1fr) 62px;
+    gap:9px;
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-play{
+    height:32px;
+    font-size:7px;
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-progress{
+    height:16px;
+  }
+  .work-detail-card:has(.detail-music-stage) .detail-music-bottom .detail-music-time{
+    min-width:62px;
+    width:62px;
+    font-size:6.6px;
+  }
+}

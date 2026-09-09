@@ -93,6 +93,13 @@ function layoutCardPhase(frame, progress) {
 
 export function renderWorks(frame) {
   const { dom, siteProgress, normalizedCanvasProgress: canvasProgress, items, cards, appState, runtimeTheme, canvasRgba, geometry, tools, windows } = frame;
+  const animationsActive = !frame.reducedMotion
+    && frame.visible
+    && !appState.detail.detailMode
+    && siteProgress < windows.worksOutEnd;
+  dom.cardLayer.classList.toggle('animations-active', animationsActive);
+  appState.worksAnimationsAreRunning = animationsActive;
+
   layoutNodePhase(frame, canvasProgress);
   layoutCardPhase(frame, canvasProgress);
 
@@ -145,6 +152,8 @@ export function renderWorks(frame) {
 }
 
 export function resetWorks({ dom, cards, nodes, appState }) {
+  dom.cardLayer.classList.remove('animations-active');
+  appState.worksAnimationsAreRunning = false;
   dom.cardLayer.style.opacity = 0;
   dom.cardLayer.style.transform = 'scale(.982)';
   dom.cardLayer.style.filter = 'blur(3px)';

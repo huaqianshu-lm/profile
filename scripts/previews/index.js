@@ -1,10 +1,10 @@
 import { cleanupDetailAudio, cleanupDetailVideo } from '../media/music-player.js';
-import { renderVideoPreview } from './video.js';
+import { renderVideoPreview } from './video.js?v=20260909-video-only';
 import { renderMusicPreview } from './music.js';
 import { renderMemoraPreview } from './memora.js';
 import { renderRadarPreview } from './radar.js';
-import { renderLifeosPreview } from './lifeos.js';
-import { renderEcholinePreview } from './echoline.js';
+import { renderLifeosPreview } from './lifeos.js?v=20260909-lifeos-demo-capture-arrow';
+import { cleanupEcholinePreview, renderEcholinePreview } from './echoline.js?v=20260909-echoline-v6-fix1';
 
 const PREVIEW_BUILDERS = Object.freeze({
   video: renderVideoPreview,
@@ -18,6 +18,7 @@ const PREVIEW_BUILDERS = Object.freeze({
 export function buildDetailPreview({ item, preview }) {
   cleanupDetailAudio();
   cleanupDetailVideo(preview);
+  cleanupEcholinePreview();
   preview.className = 'work-detail-preview';
   preview.innerHTML = '';
 
