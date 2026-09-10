@@ -10,7 +10,7 @@ export const WORKS = Object.freeze([
 
     // ===== REAL CONTENT =====
     tagline:'一套把原始内容稳定转化为可交付视频的 AI 视频生产系统。',
-    description:'Video Production Harness 将内容分析、视频叙事、Scene 脚本、视觉原型、AI 配音、字幕时间线、Remotion 动画和远程渲染连接成一条可暂停、可检查、可恢复的工作流。项目已管理 55 个视频项目，并通过多条真实 AI 教程视频完成端到端验证。',
+    description:'Video Production Harness 将内容分析、视频叙事、Scene 脚本、视觉原型、AI 配音、字幕时间线、Remotion 动画和远程渲染连接成一条可暂停、可检查、可恢复的工作流。在单条生产链路之上，系统支持通过统一模板批量创建视频任务、集中编排生产阶段，并为每条视频独立保留人工检查点与失败恢复状态，让系列内容能够稳定、连续地规模化制作。项目已管理 55 个视频项目，并通过多条真实 AI 教程视频完成端到端验证。',
     role:['独立创作者','产品设计与开发','AI 视频导演'],
     status:'持续开发中 · MVP 已完成 · E2E 已验证',
     year:'2026—至今',
