@@ -78,9 +78,9 @@ function buildVisual(container, type) {
       <div class="task"><span>Project → Next Action</span><span>→</span></div>
       <div class="task"><span>Review → Adjust</span><span>↺</span></div>
     </div>`;
-  } else if (type === 'echo') {
-    container.className = 'visual echo';
-    container.innerHTML = '<div class="echo-ring"></div><div class="echo-ring"></div><div class="echo-ring"></div>';
+  } else if (type === 'map') {
+    container.className = 'visual map';
+    buildMapAnimation(container);
   }
 }
 
@@ -108,6 +108,26 @@ function buildGraph(element) {
     node.style.animationDelay = `${-index * .25}s`;
     element.appendChild(node);
   });
+}
+
+function buildMapAnimation(element) {
+  const field = document.createElement('div');
+  field.className = 'map-field';
+  field.innerHTML = `
+    <div class="map-orbit map-orbit-a"></div>
+    <div class="map-orbit map-orbit-b"></div>
+    <div class="map-orbit map-orbit-c"></div>
+    <div class="map-core"></div>
+  `;
+  [[20, 28], [79, 26], [16, 67], [84, 68], [63, 16], [39, 78]].forEach(([x, y], index) => {
+    const signal = document.createElement('div');
+    signal.className = 'map-signal';
+    signal.style.left = `${x}%`;
+    signal.style.top = `${y}%`;
+    signal.style.animationDelay = `${-index * .55}s`;
+    field.appendChild(signal);
+  });
+  element.appendChild(field);
 }
 
 export function bindCardInteractions({ cards, items, isDetailOpen, onOpen, onRefreshOrigin, onHoverChange }) {

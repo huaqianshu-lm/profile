@@ -4,7 +4,7 @@ import { renderMusicPreview } from './music.js';
 import { renderMemoraPreview } from './memora.js';
 import { renderRadarPreview } from './radar.js';
 import { renderLifeosPreview } from './lifeos.js?v=20260909-lifeos-demo-capture-arrow';
-import { cleanupEcholinePreview, renderEcholinePreview } from './echoline.js?v=20260909-echoline-v6-fix1';
+import { renderMapPreview } from './map.js?v=20260912-map-preview-brand-v2';
 
 const PREVIEW_BUILDERS = Object.freeze({
   video: renderVideoPreview,
@@ -12,13 +12,12 @@ const PREVIEW_BUILDERS = Object.freeze({
   memora: renderMemoraPreview,
   news: renderRadarPreview,
   lifeos: renderLifeosPreview,
-  echo: renderEcholinePreview
+  map: renderMapPreview
 });
 
 export function buildDetailPreview({ item, preview }) {
   cleanupDetailAudio();
   cleanupDetailVideo(preview);
-  cleanupEcholinePreview();
   preview.className = 'work-detail-preview';
   preview.innerHTML = '';
 

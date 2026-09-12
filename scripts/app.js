@@ -1,9 +1,9 @@
 import { WORKS } from './data/works.js';
 import { assertDom } from './core/dom.js';
-import { createWorkNodes, createWorkCards, bindCardInteractions } from './works/cards.js';
+import { createWorkNodes, createWorkCards, bindCardInteractions } from './works/cards.js?v=20260912-map-card-animation-v1';
 import { createDetailController } from './works/detail.js';
 import { cleanupDetailAudio, cleanupDetailVideo } from './media/music-player.js';
-import { buildDetailPreview } from './previews/index.js?v=20260909-lifeos-demo-capture-arrow';
+import { buildDetailPreview } from './previews/index.js?v=20260912-map-preview-brand-v2';
 import { canvasTheme, canvasRgba, createThemeController } from './core/theme.js';
 import { advanceTimelineRuntime, appState } from './core/state.js';
 import { createGeometryCache } from './timeline/geometry.js';

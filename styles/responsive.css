@@ -31,26 +31,6 @@ html[data-theme="light"] .works-card .video-frame::after{
     0 8px 22px rgba(36,48,53,.055);
 }
 
-html[data-theme="light"] .works-card .visual.echo{
-  background:
-    radial-gradient(circle at 35% 48%,rgba(94,117,126,.075),transparent 19%),
-    radial-gradient(circle at 68% 35%,rgba(136,158,167,.065),transparent 18%),
-    radial-gradient(circle at 50% 50%,rgba(255,255,255,.98),rgba(247,250,251,.94) 48%,rgba(235,241,243,.90) 100%);
-}
-html[data-theme="light"] .works-card .visual.echo::before{
-  content:"";
-  position:absolute;
-  left:50%;top:48%;
-  width:7px;height:7px;
-  border-radius:50%;
-  transform:translate(-50%,-50%);
-  background:#788a91;
-  box-shadow:0 0 0 5px rgba(120,138,145,.055),0 0 20px rgba(120,138,145,.12);
-}
-html[data-theme="light"] .works-card .echo-ring{
-  border-color:rgba(70,88,95,.13);
-  box-shadow:0 0 24px rgba(108,130,138,.025);
-}
 
 /* LIGHT WORKS — remove dark-looking shadows from overview previews only */
 html[data-theme="light"] .works-card{
@@ -84,12 +64,6 @@ html[data-theme="light"] .works-card .g-node{
 }
 html[data-theme="light"] .works-card .ticker,
 html[data-theme="light"] .works-card .task{
-  box-shadow:none;
-}
-html[data-theme="light"] .works-card .visual.echo::before{
-  box-shadow:0 0 0 5px rgba(120,138,145,.035),0 0 14px rgba(120,138,145,.06);
-}
-html[data-theme="light"] .works-card .echo-ring{
   box-shadow:none;
 }
 
@@ -239,25 +213,6 @@ html[data-theme="light"] .detail-radar-source{
   box-shadow:none;
 }
 
-/* =========================================================
-   LIGHT ECHOLINE — match Video detail frame
-   Remove the dark stage frame; color-only change.
-   ========================================================= */
-html[data-theme="light"] .work-detail-card[data-project="echo"]{
-  border-color:#e1e6e8;
-}
-html[data-theme="light"] .work-detail-preview:has(.detail-echo-stage){
-  border-color:#e3e8ea;
-}
-html[data-theme="light"] .work-detail-preview:has(.detail-echo-stage)::after{
-  box-shadow:none;
-}
-html[data-theme="light"] .detail-echo-stage{
-  background:#ffffff;
-}
-html[data-theme="light"] .detail-echo-app{
-  border-color:#e0e6e8;
-}
 
 /* =========================================================
    LIGHT UNFRAMED — airy reference treatment
@@ -410,28 +365,6 @@ html[data-theme="light"] .works-card .news-row span{
   color:#929a9e;
 }
 
-/* Echoline: strengthen the ripple origin without adding more UI. */
-html[data-theme="dark"] .works-card .visual.echo::before{
-  content:"";
-  position:absolute;
-  left:50%;top:48%;
-  width:7px;height:7px;
-  border-radius:50%;
-  transform:translate(-50%,-50%);
-  background:#d8d1bb;
-  box-shadow:0 0 16px rgba(238,228,200,.24);
-}
-html[data-theme="dark"] .works-card .echo-ring{
-  border-color:rgba(238,233,216,.145);
-}
-html[data-theme="light"] .works-card .visual.echo::before{
-  width:8px;height:8px;
-  background:#6f8188;
-  box-shadow:0 0 0 5px rgba(120,138,145,.045),0 0 16px rgba(120,138,145,.075);
-}
-html[data-theme="light"] .works-card .echo-ring{
-  border-color:rgba(70,88,95,.17);
-}
 
 
 /* =========================================================
@@ -1876,268 +1809,6 @@ html[data-theme="light"] .detail-radar-stage::before{
 /* END MOBILE DETAIL 05 — Life OS */
 
 
-/* =========================================================
-   MOBILE DETAIL 06 — Echoline
-   Dedicated phone listening studio. Preserve the product UI
-   and listening flow; reorganize desktop panels vertically.
-   ========================================================= */
-@media(max-width:759px){
-  .work-detail-card[data-project="echo"] .work-detail-body{
-    grid-template-rows:760px auto;
-    gap:18px;
-  }
-  .work-detail-card[data-project="echo"] .work-detail-preview{
-    grid-row:1;
-    min-height:760px;
-    overflow:hidden;
-  }
-  .work-detail-card[data-project="echo"] .work-detail-copy{
-    grid-row:2;
-  }
-
-  .work-detail-card[data-project="echo"] .detail-echo-stage{
-    padding:12px;
-    overflow:hidden;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-app{
-    height:auto;
-    min-height:100%;
-    overflow:hidden;
-    border-radius:13px;
-  }
-
-  .work-detail-card[data-project="echo"] .detail-echo-header{
-    display:grid;
-    grid-template-columns:minmax(0,1fr) auto;
-    gap:9px 8px;
-    align-items:start;
-    padding:11px 11px 8px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-brand{
-    grid-column:1;
-    min-width:0;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-brand small{
-    font-size:6px;
-    letter-spacing:.17em;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-brand strong{
-    margin-top:4px;
-    font-size:24px;
-    line-height:1;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-cta{
-    grid-column:2;
-    grid-row:1;
-    height:28px;
-    padding:0 10px;
-    border-radius:9px;
-    font-size:7px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-actions{
-    grid-column:1 / -1;
-    grid-row:2;
-    width:100%;
-    display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:5px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-pill{
-    min-width:0;
-    width:100%;
-    height:27px;
-    padding:0 7px;
-    border-radius:8px;
-    font-size:6.5px;
-  }
-
-  .work-detail-card[data-project="echo"] .detail-echo-shell{
-    padding:0 10px 10px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-player{
-    padding:10px 10px 9px;
-    border-radius:11px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-file{
-    gap:6px;
-    font-size:6.4px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-file b{
-    font-size:8.5px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-trackline{
-    margin-top:8px;
-    grid-template-columns:30px minmax(0,1fr) 30px;
-    gap:6px;
-    font-size:6px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-track{
-    height:8px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-track::before,
-  .work-detail-card[data-project="echo"] .detail-echo-track i{
-    height:5px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-track i::after{
-    width:9px;
-    height:9px;
-    right:-3px;
-  }
-
-  .work-detail-card[data-project="echo"] .detail-echo-controls{
-    margin-top:9px;
-    display:grid;
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:5px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-chip{
-    min-width:0;
-    width:100%;
-    height:25px;
-    padding:0 4px;
-    border-radius:8px;
-    font-size:6.2px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-hint{
-    display:none;
-  }
-
-  .work-detail-card[data-project="echo"] .detail-echo-speed,
-  .work-detail-card[data-project="echo"] .detail-echo-offset{
-    margin-top:8px;
-    gap:5px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-label{
-    width:100%;
-    font-size:5.8px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-mini,
-  .work-detail-card[data-project="echo"] .detail-echo-ghost{
-    height:22px;
-    padding:0 7px;
-    border-radius:7px;
-    font-size:5.8px;
-  }
-
-  .work-detail-card[data-project="echo"] .detail-echo-grid{
-    margin-top:8px;
-    display:grid;
-    grid-template-columns:1fr;
-    gap:8px;
-    height:auto;
-    flex:none;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-panel{
-    min-height:0;
-    overflow:hidden;
-    border-radius:11px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-panelhead{
-    gap:7px;
-    padding:9px 10px 7px;
-    font-size:6px;
-    line-height:1.25;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-panelhead > span{
-    max-width:58%;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
-    text-align:right;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-panelhead b{
-    margin-top:3px;
-    font-size:10px;
-    line-height:1.1;
-  }
-
-  .work-detail-card[data-project="echo"] .detail-echo-lesson{
-    padding:5px 10px 0;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-sentence-cn{
-    font-size:14px;
-    line-height:1.3;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-sentence-en{
-    margin-top:5px;
-    font-size:11px;
-    line-height:1.3;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-divider{
-    margin:9px 10px 0;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-mode{
-    padding:8px 10px 9px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-modehead{
-    gap:6px;
-    font-size:5.7px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-mode p{
-    margin-top:5px;
-    font-size:6.5px;
-    line-height:1.45;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-textarea{
-    margin-top:7px;
-    height:42px;
-    padding:8px 9px;
-    border-radius:8px;
-    font-size:7px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-bottomactions{
-    margin-top:6px;
-    gap:6px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-submit,
-  .work-detail-card[data-project="echo"] .detail-echo-cancel{
-    height:24px;
-    padding:0 10px;
-    font-size:6.5px;
-  }
-
-  .work-detail-card[data-project="echo"] .detail-echo-panel--right{
-    display:flex;
-    flex-direction:column;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-list{
-    flex:none;
-    min-height:0;
-    overflow:visible;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-listrow,
-  .work-detail-card[data-project="echo"] .detail-echo-hardrow{
-    grid-template-columns:20px minmax(0,1fr);
-    gap:6px;
-    padding:7px 9px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-listrow em,
-  .work-detail-card[data-project="echo"] .detail-echo-hardrow em{
-    font-size:5.6px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-listrow b,
-  .work-detail-card[data-project="echo"] .detail-echo-hardrow b{
-    font-size:6.7px;
-    line-height:1.35;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-listrow span,
-  .work-detail-card[data-project="echo"] .detail-echo-hardrow span{
-    margin-top:3px;
-    font-size:5.4px;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-listrow:nth-child(3){
-    display:none;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-sidebottom{
-    flex:none;
-    min-height:0;
-    overflow:hidden;
-  }
-  .work-detail-card[data-project="echo"] .detail-echo-hardlist{
-    overflow:hidden;
-  }
-}
-/* END MOBILE DETAIL 06 — Echoline */
 
 
 
@@ -2619,37 +2290,156 @@ html[data-theme="light"] .detail-radar-stage::before{
   }
 }
 
-/* END MOBILE NAVIGATION */
-
-/* ECHOLINE V6 — the reference preview keeps its 16:9 composition on phones. */
-@media(max-width:860px){
-  .work-detail-card[data-project="echo"] .work-detail-body{
-    grid-template-rows:210px auto;
+/* =========================================================
+   MOBILE DETAIL 06 — AI Knowledge Map
+   Stack the knowledge domains for touch screens while keeping
+   search, collapse, node expansion and the detail drawer intact.
+   ========================================================= */
+@media(max-width:759px){
+  #workDetailCard[data-project="map"] .work-detail-body{
+    display:block;
     gap:18px;
     overflow-x:hidden;
     overflow-y:auto;
+    overscroll-behavior:contain;
+    touch-action:pan-y;
   }
-  .work-detail-card[data-project="echo"] .work-detail-preview{
-    grid-row:1;
+  #workDetailCard[data-project="map"] .work-detail-preview{
     width:100%;
-    height:210px;
-    min-height:210px;
-    overflow:hidden;
+    height:auto;
+    min-height:0;
+    overflow:visible;
+  }
+  #workDetailCard[data-project="map"] .work-detail-copy{
+    margin-top:18px;
+  }
+  #workDetailCard[data-project="map"] .detail-map-stage{
+    position:relative;
+    inset:auto;
+    min-height:0;
+    overflow:visible;
+    touch-action:pan-y;
+  }
+
+  #workDetailCard[data-project="map"] .detail-map-head{
+    align-items:stretch;
+    gap:9px;
+    padding:14px 14px 8px;
+  }
+  #workDetailCard[data-project="map"] .detail-map-brand{
+    margin-right:0;
+  }
+  #workDetailCard[data-project="map"] .detail-map-brand h1{
+    font-size:20px;
+  }
+  #workDetailCard[data-project="map"] .detail-map-brand small{
+    font-size:9px;
+  }
+  #workDetailCard[data-project="map"] .detail-map-search{
+    width:100%;
+    min-height:32px;
+    padding:7px 10px;
+    font-size:10px;
+  }
+
+  #workDetailCard[data-project="map"] .detail-map-legend{
+    gap:7px 10px;
+    padding:0 14px 10px;
+    font-size:8.5px;
+  }
+  #workDetailCard[data-project="map"] .detail-map-legend-item{
+    gap:4px;
+  }
+  #workDetailCard[data-project="map"] .detail-map-legend-dot{
+    width:6px;
+    height:6px;
+  }
+
+  #workDetailCard[data-project="map"] .detail-map-scroll{
+    flex:0 0 auto;
+    overflow:visible;
+    padding:0 14px 18px;
+    scrollbar-width:none;
+  }
+  #workDetailCard[data-project="map"] .detail-map-scroll::-webkit-scrollbar{display:none}
+  #workDetailCard[data-project="map"] .detail-map{
+    padding-top:0;
+  }
+  #workDetailCard[data-project="map"] .detail-map::before,
+  #workDetailCard[data-project="map"] .detail-map-domain::before{
+    display:none;
+  }
+  #workDetailCard[data-project="map"] .detail-map-domains{
+    grid-template-columns:minmax(0,1fr);
+    gap:8px;
+    min-width:0;
+  }
+  #workDetailCard[data-project="map"] .detail-map-domain-head{
+    display:grid;
+    grid-template-columns:auto minmax(0,1fr) auto;
+    align-items:center;
+    gap:7px;
+    margin-top:0;
+    padding:9px 10px;
+  }
+  #workDetailCard[data-project="map"] .detail-map-domain-code{
+    font-size:13px;
+  }
+  #workDetailCard[data-project="map"] .detail-map-domain-name{
+    min-height:0;
+    margin-top:0;
+    font-size:9px;
+    line-height:1.3;
+  }
+  #workDetailCard[data-project="map"] .detail-map-domain-count{
+    margin-top:0;
+    font-size:8px;
+    white-space:nowrap;
+  }
+  #workDetailCard[data-project="map"] .detail-map-nodes{
+    margin-top:8px;
+    padding-left:8px;
+  }
+  #workDetailCard[data-project="map"] .detail-map-node{
+    margin:6px 0;
+  }
+  #workDetailCard[data-project="map"] .detail-map-node-card{
+    padding:8px 8px 7px;
+  }
+  #workDetailCard[data-project="map"] .detail-map-node-name{
+    font-size:10.5px;
+  }
+  #workDetailCard[data-project="map"] .detail-map-node-levels{
+    font-size:8px;
+  }
+
+  #workDetailCard[data-project="map"] .detail-map-drawer{
+    left:12px;
+    right:12px;
+    bottom:12px;
+    width:auto;
+    max-height:58%;
+    padding:14px 14px;
+    border-radius:12px;
+  }
+  #workDetailCard[data-project="map"] .detail-map-drawer-close{
+    top:8px;
+    right:8px;
+    width:30px;
+    height:30px;
+    padding:0;
+  }
+  #workDetailCard[data-project="map"] .detail-map-drawer-title{
+    font-size:14px;
+  }
+  #workDetailCard[data-project="map"] .detail-map-kv{
+    grid-template-columns:74px minmax(0,1fr);
+    gap:8px;
   }
 }
 
-@media(max-width:759px){
-  .work-detail-card[data-project="echo"] .work-detail-body{
-    grid-template-rows:clamp(180px,56.25vw,220px) auto;
-  }
-  .work-detail-card[data-project="echo"] .work-detail-preview{
-    height:auto;
-    min-height:0;
-  }
-  .work-detail-card[data-project="echo"] .work-detail-copy{
-    grid-row:2;
-  }
-}
+/* END MOBILE NAVIGATION */
+
 
 /* =========================================================
    DARK DETAIL PREVIEWS — Life OS / echoline / AI Radar
@@ -2721,52 +2511,6 @@ html[data-theme="dark"] #workDetailCard[data-project="lifeos"] .detail-lifeos-de
   color:#82918c;
 }
 
-/* echoline */
-html[data-theme="dark"] .detail-echo-demo{
-  --echo-bg:#0d151a;
-  --echo-text:#e5edf1;
-  --echo-muted:#8999a2;
-  --echo-faint:#64757e;
-  --echo-line:rgba(181,204,207,.18);
-  --echo-accent:#78b29e;
-  --echo-accent-2:#78aebb;
-  border-color:rgba(181,204,207,.18);
-  background:
-    linear-gradient(rgba(121,164,158,.045) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(121,164,158,.045) 1px,transparent 1px),
-    radial-gradient(circle at 18% 18%,rgba(120,178,158,.09),transparent 22%),
-    radial-gradient(circle at 82% 72%,rgba(120,174,187,.08),transparent 24%),
-    var(--echo-bg);
-  color-scheme:dark;
-}
-html[data-theme="dark"] .detail-echo-demo-loop-badge{
-  background:rgba(255,255,255,.055);
-}
-html[data-theme="dark"] .detail-echo-demo-subtitle.is-hidden{
-  text-shadow:0 0 9px rgba(229,237,241,.16);
-}
-html[data-theme="dark"] .detail-echo-demo-subtitle .soft{
-  color:#91a29f;
-}
-html[data-theme="dark"] .detail-echo-demo-wave .bar{
-  background:#71837f;
-}
-html[data-theme="dark"] .detail-echo-demo-track{
-  background:#56676a;
-}
-html[data-theme="dark"] .detail-echo-demo-range{
-  background:rgba(120,178,158,.22);
-}
-html[data-theme="dark"] .detail-echo-demo-range::before,
-html[data-theme="dark"] .detail-echo-demo-range::after{
-  background:rgba(120,178,158,.55);
-}
-html[data-theme="dark"] .detail-echo-demo-input-line{
-  border-bottom-color:rgba(181,204,207,.22);
-}
-html[data-theme="dark"] .detail-echo-demo-typed .wrong{
-  color:#93a39f;
-}
 
 /* AI Radar — current reference composition uses generic child names,
    so these selectors intentionally stay inside the reference preview. */
@@ -2873,47 +2617,6 @@ html[data-theme="dark"] .detail-radar-app.is-reference-filter .footer b{
   color:var(--radar-text);
 }
 
-/* LIGHT ECHOLINE — align the current v6 demo with Memora's neutral surface. */
-html[data-theme="light"] .work-detail-card[data-project="echo"]{
-  border-color:#e3e6ea;
-  background:#ffffff;
-  box-shadow:0 26px 76px rgba(23,29,32,.045),inset 0 1px 0 #ffffff;
-}
-html[data-theme="light"] #workDetailCard[data-project="echo"] .work-detail-preview{
-  border-color:#e7e9ed;
-  background:#ffffff;
-  box-shadow:none;
-}
-html[data-theme="light"] #workDetailCard[data-project="echo"] .work-detail-preview::after{
-  box-shadow:none;
-}
-html[data-theme="light"] .detail-echo-demo{
-  --echo-bg:#ffffff;
-  --echo-text:#202428;
-  --echo-muted:#747d82;
-  --echo-faint:#9ca5a9;
-  --echo-line:#e2e5eb;
-  --echo-accent:#3f7768;
-  --echo-accent-2:#4f8190;
-  border-color:#e2e5eb;
-  background:
-    linear-gradient(rgba(55,65,82,.014) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(55,65,82,.014) 1px,transparent 1px),
-    radial-gradient(circle at 18% 10%,rgba(63,119,104,.025),transparent 22%),
-    var(--echo-bg);
-  box-shadow:none;
-  color-scheme:light;
-}
-html[data-theme="light"] .detail-echo-demo-loop-badge{
-  background:#ffffff;
-  border-color:#e3e6eb;
-}
-html[data-theme="light"] .detail-echo-demo-subtitle.is-hidden{
-  text-shadow:0 0 9px rgba(32,38,36,.08);
-}
-html[data-theme="light"] .detail-echo-demo-input-line{
-  border-bottom-color:#e2e5eb;
-}
 
 /* =========================================================
    MOBILE DETAIL 02 — compact Unframed spacing

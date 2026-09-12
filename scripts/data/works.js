@@ -142,31 +142,30 @@ export const WORKS = Object.freeze([
   },
 
   {
-    id:'echoline',
-    name:'Echoline',
-    sub:'English Learning · Local-first',
-    type:'echo',
+    id:'ai-map',
+    name:'AI Knowledge Map',
+    sub:'AI Application Engineering',
+    type:'map',
     idx:'06',
     pos:[.66,.64],
     card:[.70,.77,.34,.18],
 
     // ===== REAL CONTENT =====
-    tagline:'面向本地影视材料的字幕驱动英语精听工具。',
-    description:'Echoline 是一个本地优先的英语精听 Web 应用。用户可以加载本地视频和 SRT、ASS 字幕，按照字幕逐句播放影视对白，并自动跳过无对白的空白片段。项目围绕「听 → 循环 → 听写 → 检查 → 复习」设计，将单句循环、倍速、字幕校准、听写差异比较、难句标记与间隔复习整合进同一套本地学习流程；学习记录保存在浏览器本地，不依赖账号、云同步或 AI 服务。',
-    role:['独立产品设计','前端开发'],
-    status:'V1 核心流程已实现 · 手动验收中',
+    tagline:'一张以 AI Application Engineering 为主线的知识地图，把领域、节点与学习要点组织成可浏览的学习路线。',
+    description:'AI 知识地图以 AI Application Engineering 为主线，按「领域 → 节点 → 学习要点」三层结构组织 LLM、Context Engineering、Agent、Workflow、Harness、Skill、State / Memory / Knowledge、Evaluation 与 AI Product Engineering 等知识。每个节点标记当前与目标 Level、学习状态（Unknown / Gap / Active / Stable / Backlog）、验证状态与前置节点，把零散的知识点收敛成一条可定位、可追溯的学习路线。地图以纯静态单页实现，不依赖构建工具或后端服务。',
+    role:['产品设计','信息架构设计','前端开发'],
+    status:'持续建设中 · 146 节点',
     year:'2026',
-    tags:['React','TypeScript','Vite','HTML5 Video','SRT','ASS','English Learning','Dictation','Local-first','Spaced Review'],
-    url:'',
+    tags:['AI','学习路线','知识地图','AI Application Engineering','静态站点'],
+    url:'https://ai-knowledge-map.huaqianshu.net/',
     media:{
-      cover:'',
-      demo:''
+      cover:''
     },
 
     detail:{
-      kicker:'LOCAL-FIRST / ENGLISH LISTENING',
-      phase:'ECHOLINE / LISTENING TOOL',
-      action:'DEMO / 待部署'
+      kicker:'AI APPLICATION ENGINEERING / KNOWLEDGE MAP',
+      phase:'AI KNOWLEDGE MAP / LEARNING ROUTE',
+      action:'OPEN MAP ↗'
     }
   }
 ]);
